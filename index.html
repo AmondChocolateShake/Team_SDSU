@@ -15,5 +15,51 @@
 </body>
 </html>
 
-<script defer src="./jieun.js"></script>
+<script>
+
+    const page2 = document.getElementById('page2');
+    const root = document.getElementById('root');
+
+    let myimg = document.createElement('div');
+    page2.appendChild(myimg);
+    
+
+    let mytexts = document.createElement('div')
+    page2.appendChild(mytexts);
+
+    //mytexts >div 5
+    for(i=0;i<5;i++){
+    let text=document.createElement('div');
+    mytexts.appendChild(text);
+    text.innerText='text';
+    text.style.backgroundColor = 'black';
+    }
+//------------------------------------------
+
+page2.style.display = 'flex';
+page2.style.width ='400px';
+page2.style.height = '900px';
+page2.style.backgroundColor = 'gray';
+page2.style.alignItems = 'center';
+page2.style.flexDirection= 'column';
+
+myimg.style.display = 'flex';
+myimg.style.width ='100px';
+myimg.style.height = '100px';
+myimg.style.backgroundColor = 'black';
+
+mytexts.style.display = 'flex';
+mytexts.style.width ='350px';
+mytexts.style.height = '600px';
+mytexts.style.backgroundColor = 'white';
+mytexts.style.display = 'flex';
+mytexts.style.alignItems = 'center';
+mytexts.style.flexDirection= 'column';
+
+
+
+
+
+
+</script>
 
