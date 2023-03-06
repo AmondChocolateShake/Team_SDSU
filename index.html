@@ -14,53 +14,35 @@
 </html>
 <style> 
 /* 테스트용 */
+
+    body {display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+    }
     .profile {
-        width: 150px;
-        height: 150px;
+        width: 200px;
+        height: 200px;
         background-color: rgb(216, 175, 175);
         display: flex;
+        text-align: center;
+        flex-direction: column;
+        border-radius: 100px;
+        position: relative;
+        top : 70px;
+        
     }
     #root {
-        width: 300px;
+        width: 350px;
         height: 600px;
         background-color: antiquewhite;
         display: flex;
         text-align: center;
-        align-items:baseline;
-        
-
+        flex-direction: column;
+        border-radius: 50px;
+        z-index: 1;
     }
 </style>
-<script>
+<script defer src="./jieun.js"></script>
 
-    const profile = document.getElementsByClassName('profile');
-    
-
-    const root = document.getElementById('root');
-    //root >div 5
-    
-    for(i=0;i<5;i++){
-    let divs=document.createElement('div');
-    root.appendChild(divs);
-    divs.innerText='자기소개';
-    }
-
-    // function displayMaker(name){
-    //     name.style.display ="flex";
-    //     name.style.alignItem = "center";
-    //     name.style.textAlign = "center";
-    // }
-    
-    // displayMaker('root');
-    // displayMaker('profile');
-
-    
-    
-
-    
-
-
-    
-
-    
-</script>
