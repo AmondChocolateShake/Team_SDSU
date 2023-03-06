@@ -2,7 +2,7 @@
 
     const page2 = document.getElementById('page2');
     const root = document.getElementById('root');
-  
+
     function elementMaker(name, target, attri, attriValue) {
         const element = document.createElement(name);
         target.appendChild(element);
@@ -10,7 +10,6 @@
                 element.setAttribute(attri, attriValue);
         }
     }
-
     elementMaker('div','root','id','img');
     elementMaker('div','root','id','text');
 
