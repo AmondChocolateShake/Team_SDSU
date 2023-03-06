@@ -7,6 +7,45 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <div class="profile"></div>
+    <div id="root"></div>
+
 </body>
 </html>
+<style> 
+/* 테스트용 */
+    .profile {
+        width: 150px;
+        height: 150px;
+        background-color: brown;
+    }
+    #root {
+        width: 300px;
+        height: 600px;
+        background-color: antiquewhite;
+    }
+</style>
+<script>
+
+    const profile = document.getElementsByClassName('profile');
+    
+
+    const root = document.getElementById('root');
+    //root >div 5
+    
+    for(i=0;i<5;i++){
+    let divs=document.createElement('div');
+    root.appendChild(divs);
+    divs.innerText='자기소개';
+    }
+
+    
+    
+
+    
+
+
+    
+
+    
+</script>
