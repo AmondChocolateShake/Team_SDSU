@@ -1,27 +1,30 @@
 const root = document.getElementById('root');
 const page2 = document.getElementById('page2');
 // page2 style
-page2.style.width = "100vw";
-page2.style.height = "100vh";
-page2.style.backgroundColor = "#AADF7F";
-page2.style.display = "flex";
-page2.style.flexDirection = "column";
-page2.style.justifyContent = "space-around";
-page2.style.alignContent = "center-around";
+// page2.style.width = "100vw";
+// page2.style.height = "100vh";
+// page2.style.backgroundColor = "#AADF7F";
+// page2.style.display = "flex";
+// page2.style.flexDirection = "column";
+// page2.style.justifyContent = "space-around";
+// page2.style.alignContent = "center-around";
 
 /// 객체화 진행 중
 const page2StyleObject = ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"];
 const page2StyleValue = ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"];
 
-let page2DomStyle = {
-  firstArray : ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"],
-  secondArray : ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"],
-  element : root.children[1]
-};
+// let page2DomStyle = {
+//   firstArray : ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"],
+//   secondArray : ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"],
+//   element : root.children[1]
+// };
 
-function page2Domstyling () {
-
+function page2Domstyling (firstArray, secondArray, element) {
+  for (let i = 0; i < firstArray.length; i++) {
+    element.style[firstArray[i]] = secondArray[i];
+  };
 };
+page2Domstyling(page2StyleObject, page2StyleValue, page2);
 ///
 // // 원과 박스를 감싸는 div
 // const makeIntroduceBox1 = document.createElement('div');
