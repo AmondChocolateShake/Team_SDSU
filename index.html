@@ -17,12 +17,18 @@
     .profile {
         width: 150px;
         height: 150px;
-        background-color: brown;
+        background-color: rgb(216, 175, 175);
+        display: flex;
     }
     #root {
         width: 300px;
         height: 600px;
         background-color: antiquewhite;
+        display: flex;
+        text-align: center;
+        align-items:baseline;
+        
+
     }
 </style>
 <script>
@@ -38,6 +44,15 @@
     root.appendChild(divs);
     divs.innerText='자기소개';
     }
+
+    // function displayMaker(name){
+    //     name.style.display ="flex";
+    //     name.style.alignItem = "center";
+    //     name.style.textAlign = "center";
+    // }
+    
+    // displayMaker('root');
+    // displayMaker('profile');
 
     
     
