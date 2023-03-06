@@ -1,13 +1,23 @@
 
 
-    const profile = document.getElementsByClassName('profile');
-    const body = document.querySelector('body');
+    const page2 = document.getElementById('page2');
     const root = document.getElementById('root');
-    //root >div 5
-    
+  
+    function elementMaker(name, target, attri, attriValue) {
+        const element = document.createElement(name);
+        target.appendChild(element);
+            if (attri !== undefined) {
+                element.setAttribute(attri, attriValue);
+        }
+    }
+
+    elementMaker('div','root','id','img');
+    elementMaker('div','root','id','text');
+
+    //text >div 5
     for(i=0;i<5;i++){
     let divs=document.createElement('div');
-    root.appendChild(divs);
+    text.appendChild(divs);
     divs.innerText='text';
     divs.style.width = '100%';
     divs.style.height = '100%';
@@ -19,8 +29,8 @@
         name.style.display = 'flex';
     }
     styleMaker('body','400px','900px');
-    styleMaker('root','350px','600px');
-    styleMaker('profile','200px','200px');
+    styleMaker('text','350px','600px');
+    styleMaker('img','200px','200px');
 
     function setDisplay(name){
         name.style.display='flex';
@@ -30,15 +40,16 @@
 
     }
     setDisplay('body');
-    setDisplay('root');
-    setDisplay('profile');
+    setDisplay('text');
+    setDisplay('img');
     
-    root.style.borderRadius="50px";
-    root.style.backgroundColor="gray";
-    profile.borderRadius="100px";
-    profile.style.backgroundColor="gray";
-    profile.style.position='relative';
-    profile.style.top = '70px';
+    text.style.borderRadius="50px";
+    text.style.backgroundColor="gray";
+    text.style.zIndex= '1';
+    img.borderRadius="100px";
+    img.style.backgroundColor="gray";
+    img.style.position='relative';
+    img.style.top = '70px';
 
 
 
