@@ -1,2 +1,55 @@
 * {margin: 0; padding: 0; box-sizing: border-box;}
+
 main > div {align-items: center; justify-items: center;}
+
+body {
+  overflow-x: hidden;
+}
+/* 페이지 1 */
+#page1 {
+  width: 100vw;
+  min-height: 100vh;
+  background-color : #88D4F4;
+}
+/* 섹션 1, 타이틀 */
+#page1 > section:nth-child(1) {
+  width: 100%;
+  background-color: #C8B074;
+}
+#page1 > section:nth-child(1) > h1 {
+  text-align:center;
+  font-size: 3em;
+}
+#page1 > section:nth-child(1) > h2 {
+  text-align: center;
+  font-size: 2em;
+}
+/* 섹션 2, 팀 소개란 */
+#page1 > section:nth-child(2) {
+  width: 96%;
+  height: 76vw;
+  margin: 2vh 2vw;
+  background-color: #D9D9D9;
+}
+#page1 > section:nth-child(2) > h1 {
+  width: 96%;
+  min-height: 20%;
+  margin: 2%;
+  background-color: #D06D6D;
+  /* 텍스트 설정 */
+  text-align: center;
+  font-size: 2em;
+}
+page1 > section:nth-child(2)> p {
+  font-size: 2em;
+}
+/* 클래스 */
+.flex {
+  /* flex 설정 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.flexJC-center {
+  justify-content: center;
+}
