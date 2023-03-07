@@ -65,7 +65,7 @@ function addChild(parent, childobj){
   parent.appendChild(childobj.element);
 }
 //테스트용 구문.
-const section1 = elementMaker("section");
-console.log(section1);
-console.log(document.getElementById('page1'));
-addChild(pageOne,section1);
+//const section1 = elementMaker("section");
+//console.log(section1);
+//console.log(document.getElementById('page1'));
+//addChild(pageOne,section1);
