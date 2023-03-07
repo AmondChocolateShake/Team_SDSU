@@ -172,12 +172,17 @@ for (let i = 0; i < 5; i++) {
 const text = document.createElement('div');
     text.innerText = 'text';
     text.style.width = '90%';
-    text.style.backgroundColor = 'black';
+    text.style.backgroundColor = 'gray';
+    text.style.display = 'flex';
+    text.style.flexDirection = 'center';
+    
     if (i === 4) {
     text.style.height = '25%';
+    text.style.margin = '2%';
+
     } else {
     text.style.height = '15%';
-    text.style.margin = '1%';
+    text.style.margin = '2%';
     }mytexts.appendChild(text);
 }
 //----setStyle  
@@ -202,7 +207,7 @@ setStyle(myimg, {
     display: 'flex',
     width: '200px',
     height: '200px',
-    backgroundColor: 'black',
+    backgroundColor: 'white',
     borderRadius: '100px',
 });
 //text
@@ -215,15 +220,53 @@ setStyle(mytexts, {
     flexDirection: 'column',
     color: 'white',
 });
+//mytexts> div
+//setStyle(mytexts.children,{
+  
+
+
+
+//});
+
+//----------03/07추가 obj에서 꺼내쓰기
+const team = {
+    one:["사진","김동주","","","",""],
+    two:["사진","이재권","","","",""],
+    three:["사진","정지은","깃허브","je_eun2735@naver.com","서구","자기소개"],
+    four:["사진","최대건","","","",""],
+    five:["사진","임지성","","","",""]
+}
+
+
+let img = document.createElement('img');
+img.setAttribute('src','사진테스트.png');
+img.style.width = '100%';
+img.style.height = '100%';
+img.style.borderRadius ='100px';
+
+
+console.log(mytexts.children[0]);
+mytexts.children[0].innerText = team.three[1];
+mytexts.children[1].innerText = team.three[2];
+mytexts.children[2].innerText = team.three[3];
+mytexts.children[3].innerText = team.three[4];
+mytexts.children[4].innerText = team.three[5];
+
+console.dir(mytexts);
+
+console.log(img);
+
+
+
+
+
+
+
+
+
+
 
 // 요소 추가
 page2.appendChild(myimg);
 page2.appendChild(mytexts);
-
-
-
-
-
-
-
-
+myimg.appendChild(img);
