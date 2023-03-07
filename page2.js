@@ -71,6 +71,7 @@ page2DomStyling(page2DomStyle);
 let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
 
 function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
+  // makeIntroduceBoxArray의 요소 갯수 만큼 반복 진행
   for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
     // 요소 만들고 구조를 생성하는 부분
     const makeIntroduceBox = document.createElement(containerElement);
