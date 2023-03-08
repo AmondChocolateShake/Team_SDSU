@@ -67,6 +67,32 @@ tColor.textContent = "우리의 색깔";
 tMotto.textContent = "좌우명";
 tPurpose.textContent = "목표";
 tMatJjip.textContent = "맛집";
-//페이지 
-document.getElementById("root").appendChild(section2);
+//태그 스타일 설정
+//tDiscription
+//크기 설정
+tDiscription.style.maxWidth = "96vw";
+tDiscription.style.maxHeight = "76vh";
+tDiscription.style.boxSizing = "border-box";
+//디스플레이 설정
+tDiscription.style.display = "flex";
+tDiscription.style.flexDirection = "column";
+//여백 설정
+tDiscription.style.margin = "2vh 2vw";
+tDiscription.style.padding = "2vh 2vw";
+//색상 설정
+tDiscription.style.backgroundColor = "#D9D9D9";
 
+//크기 설정
+tNameExplain.style.maxWidth = "100%";
+tNameExplain.style.height = "20%";
+tNameExplain.style.boxSizing = "border-box";
+//디스플레이 설정
+//여백 설정
+tNameExplain.style.margin = "2vh 0";
+tNameExplain.style.padding = "2vh 0";
+//색상 설정
+tNameExplain.style.backgroundColor = "#D06D6D";
+
+
+//페이지 연결
+document.getElementById("page1").appendChild(tDiscription);
