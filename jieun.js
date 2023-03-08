@@ -222,9 +222,6 @@ setStyle(mytexts, {
 });
 //mytexts> div
 //setStyle(mytexts.children,{
-  
-
-
 
 //});
 
@@ -237,13 +234,11 @@ const team = {
     five:["사진","임지성","","","",""]
 }
 
-
 let img = document.createElement('img');
 img.setAttribute('src','사진테스트.png');
 img.style.width = '100%';
 img.style.height = '100%';
 img.style.borderRadius ='100px';
-
 
 console.log(mytexts.children[0]);
 mytexts.children[0].innerText = team.three[1];
@@ -253,18 +248,7 @@ mytexts.children[3].innerText = team.three[4];
 mytexts.children[4].innerText = team.three[5];
 
 console.dir(mytexts);
-
 console.log(img);
-
-
-
-
-
-
-
-
-
-
 
 // 요소 추가
 page2.appendChild(myimg);
