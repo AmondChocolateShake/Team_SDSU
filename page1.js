@@ -23,3 +23,28 @@ title2.style.padding = '10px'
 
 
 /**-------------------------작업 구분선--------------------------- */
+
+//태그 구조 작성
+let tDiscription = document.createElement("section");
+let tNameExplain = document.createElement("h3");
+tDiscription.appendChild(tNameExplain);
+let tWhoWeAre = document.createElement("p");
+tDiscription.appendChild(tWhoWeAre);
+let tColor = document.createElement("p");
+tDiscription.appendChild(tColor);
+let tMotto = document.createElement("p");
+tDiscription.appendChild(tMotto);
+let tPurpose = document.createElement("p");
+tDiscription.appendChild(tPurpose);
+let tMatJjip = document.createElement("p");
+tDiscription.appendChild(tMatJjip);
+//태그 컨텐츠(내용물) 설정
+tNameExplain.textContent = "팀 명 뜻";
+tWhoWeAre.textContent = "우리 팀은 누구인가";
+tColor.textContent = "우리의 색깔";
+tMotto.textContent = "좌우명";
+tPurpose.textContent = "목표";
+tMatJjip.textContent = "맛집";
+//페이지 
+document.getElementById("root").appendChild(section2);
+
