@@ -68,31 +68,67 @@ tMotto.textContent = "좌우명";
 tPurpose.textContent = "목표";
 tMatJjip.textContent = "맛집";
 //태그 스타일 설정
-//tDiscription
-//크기 설정
-tDiscription.style.maxWidth = "96vw";
-tDiscription.style.maxHeight = "76vh";
-tDiscription.style.boxSizing = "border-box";
-//디스플레이 설정
-tDiscription.style.display = "flex";
-tDiscription.style.flexDirection = "column";
-//여백 설정
-tDiscription.style.margin = "2vh 2vw";
-tDiscription.style.padding = "2vh 2vw";
-//색상 설정
-tDiscription.style.backgroundColor = "#D9D9D9";
+function setStyle(styleSet, node) {
+  for(let styleKey in styleSet){
+    node.style[styleKey] = styleSet[styleKey];
+  }
+}
 
-//크기 설정
-tNameExplain.style.maxWidth = "100%";
-tNameExplain.style.height = "20%";
-tNameExplain.style.boxSizing = "border-box";
-//디스플레이 설정
-//여백 설정
-tNameExplain.style.margin = "2vh 0";
-tNameExplain.style.padding = "2vh 0";
-//색상 설정
-tNameExplain.style.backgroundColor = "#D06D6D";
+//tDiscription
+// //크기 설정
+// tDiscription.style.maxWidth = "96vw";
+// tDiscription.style.maxHeight = "76vh";
+// tDiscription.style.boxSizing = "border-box";
+// //디스플레이 설정
+// tDiscription.style.display = "flex";
+// tDiscription.style.flexDirection = "column";
+// //여백 설정
+// tDiscription.style.margin = "2vh 2vw";
+// tDiscription.style.padding = "2vh 2vw";
+// //색상 설정
+// tDiscription.style.backgroundColor = "#D9D9D9";
+
+// tNameExplain
+// //크기 설정
+// tNameExplain.style.maxWidth = "100%";
+// tNameExplain.style.height = "20%";
+// tNameExplain.style.boxSizing = "border-box";
+// //디스플레이 설정
+// //여백 설정
+// tNameExplain.style.margin = "2vh 0";
+// tNameExplain.style.padding = "2vh 0";
+// //색상 설정
+// tNameExplain.style.backgroundColor = "#D06D6D";
 
 
 //페이지 연결
 document.getElementById("page1").appendChild(tDiscription);
+
+//객체로 저장
+let tDiscriptionStyle = {
+  //크기 설정
+  maxWidth : "96vw",
+  maxHeight : "76vh",
+  boxSizing : "border-box",
+  //디스플레이 설정
+  display : "flex",
+  flexDirection : "column",
+  //여백 설정
+  margin : "2vh 2vw",
+  padding : "2vh 2vw",
+  //색상 설정
+  backgroundColor : "#D9D9D9",
+}
+let tNameExplainStyle = {
+  maxWidth : "100%",
+  height : "20%",
+  boxSizing : "border-box",
+  //여백 설정
+  margin : "2vh 0",
+  padding : "2vh 0",
+  //색상 설정
+  backgroundColor : "#D06D6D",
+
+} 
+setStyle(tDiscriptionStyle, tDiscription);
+setStyle(tNameExplainStyle,tNameExplain);
