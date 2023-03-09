@@ -66,6 +66,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 //--------------지은-------------------
 const myimg = document.createElement('div');
 const mytexts = document.createElement('div');
+const containerDiv = document.createElement('div');
 
 for (let i = 0; i < 5; i++) {
 const text = document.createElement('div');
@@ -93,7 +94,7 @@ function setStyle(element, styles) {
 }
 
 //호출하기 page2
-setStyle(page2, {
+setStyle(containerDiv, {
     display: 'flex',
     width: '100vw',
     height: '100vh',
@@ -119,12 +120,7 @@ setStyle(mytexts, {
     flexDirection: 'column',
     color: 'white',
 });
-//mytexts> div
-//setStyle(mytexts.children,{
 
-//});
-
-//----------03/07추가 obj에서 꺼내쓰기
 const team = {
     one:["사진","김동주","","","",""],
     two:["사진","이재권","","","",""],
@@ -150,8 +146,10 @@ console.dir(mytexts);
 console.log(img);
 
 // 요소 추가
-page2.appendChild(myimg);
-page2.appendChild(mytexts);
+
+page2.appendChild(containerDiv);
+containerDiv.appendChild(myimg);
+containerDiv.appendChild(mytexts);
 myimg.appendChild(img);
 
 
