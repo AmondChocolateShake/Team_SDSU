@@ -152,6 +152,17 @@ containerDiv.appendChild(myimg);
 containerDiv.appendChild(mytexts);
 myimg.appendChild(img);
 
+containerDiv.style.setProperty("transition", "height 1s");
+containerDiv.addEventListener("mouseover",function(){
+    containerDiv.style.setProperty("height","400px");
+
+})
+containerDiv.addEventListener("mouseout", function(){
+    containerDiv.style.setProperty("height","300px");
+    
+    })
+
+
 
 
 
