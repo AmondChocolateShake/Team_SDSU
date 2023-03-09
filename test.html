@@ -1,13 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="root">
+        <div id="page1"></div>
+        <div id="page2"></div>
+        </div>
+    </div>
+</body>
+</html>
+<script>
 const root = document.getElementById('root');
 const page2 = document.getElementById('page2');
 
-// page2 style 객체
-let page2DomStyle = {
+    let page2DomStyle = {
   firstArray : ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"],
   secondArray : ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"],
   element : page2
 };
-// page2 style 적용 함수
+//page2 style 적용 함수
 function page2DomStyling (object) {
   for (let i = 0; i < object.firstArray.length; i++) {
     object.element.style[object.firstArray[i]] = object.secondArray[i];
@@ -15,24 +31,20 @@ function page2DomStyling (object) {
 };
 page2DomStyling(page2DomStyle);
 
-let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
+// page2DomStyle.element.style['width']='100vw'; ---> 궁금한 것
 
+//let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
+introdueBoxMaker('div','div','div');//수정부분
 function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   // makeIntroduceBoxArray의 요소 갯수 만큼 반복 진행
-  for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
+  for (let i = 0; i < 1; i++) {
     // 요소 만들고 구조를 생성하는 부분
     const makeIntroduceBox = document.createElement(containerElement);
     const makeCircle = document.createElement(childElementOne);
     const makeBox = document.createElement(childElementTwo);
     page2.appendChild(makeIntroduceBox);
-    // 짝수 번째의 박스 원은 배치를 바꿔주는 조건
-    if(i%2 === 0) {
-      makeIntroduceBox.appendChild(makeCircle);
-      makeIntroduceBox.appendChild(makeBox);
-    }else {
-      makeIntroduceBox.appendChild(makeBox);
-      makeIntroduceBox.appendChild(makeCircle);
-    }
+    makeIntroduceBox.appendChild(makeCircle); //수정부분
+    makeIntroduceBox.appendChild(makeBox);  //수정부분
     makeIntroduceBox.style.width = "100%";
     makeIntroduceBox.style.height = "15%"
     makeIntroduceBox.style.display = "flex";
@@ -50,11 +62,12 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     makeBox.style.borderRadius = "20px";
   };
 };
-//----------------지은-------------------
+
+//--------------지은-------------------
 const myimg = document.createElement('div');
 const mytexts = document.createElement('div');
+const containerDiv = document.createElement('div');
 
-// mytexts >div 5 
 for (let i = 0; i < 5; i++) {
 const text = document.createElement('div');
     text.innerText = 'text';
@@ -81,7 +94,7 @@ function setStyle(element, styles) {
 }
 
 //호출하기 page2
-setStyle(page2, {
+setStyle(containerDiv, {
     display: 'flex',
     width: '100vw',
     height: '100vh',
@@ -107,12 +120,7 @@ setStyle(mytexts, {
     flexDirection: 'column',
     color: 'white',
 });
-//mytexts> div
-//setStyle(mytexts.children,{
 
-//});
-
-//----------03/07추가 obj에서 꺼내쓰기
 const team = {
     one:["사진","김동주","","","",""],
     two:["사진","이재권","","","",""],
@@ -138,8 +146,25 @@ console.dir(mytexts);
 console.log(img);
 
 // 요소 추가
-page2.appendChild(myimg);
-page2.appendChild(mytexts);
+
+page2.appendChild(containerDiv);
+containerDiv.appendChild(myimg);
+containerDiv.appendChild(mytexts);
 myimg.appendChild(img);
 
+containerDiv.style.setProperty("transition", "height 1s");
+containerDiv.addEventListener("mouseover",function(){
+    containerDiv.style.setProperty("height","400px");
 
+})
+containerDiv.addEventListener("mouseout", function(){
+    containerDiv.style.setProperty("height","300px");
+    
+    })
+
+
+
+
+
+
+</script>
