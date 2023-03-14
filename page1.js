@@ -1,3 +1,4 @@
+
 // 페이지 id 받아옴
 const pageone = document.getElementById("page1");
 
@@ -129,3 +130,4 @@ let tNameExplainStyle = {
 } 
 setStyle(tDiscriptionStyle, tDiscription);
 setStyle(tNameExplainStyle,tNameExplain);
+
