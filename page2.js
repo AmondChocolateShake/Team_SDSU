@@ -107,15 +107,54 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   };
   console.log(page2.children[0].children[1]);
   
-page2.children[0].children[1].style.setProperty("transition", "height 1s");
-page2.children[0].children[1].addEventListener("mouseover",function(){
-page2.children[0].children[1].style.setProperty("height","500px")});
+  // 첫번째 자기소개
+  page2.children[0].children[1].style.setProperty("transition", "height 1s");
+  page2.children[0].children[1].addEventListener("mouseover",function(){
+    page2.children[0].children[1].style.setProperty("height","500px")});
 
+  page2.children[0].children[1].addEventListener("mouseout",function(){
+    page2.children[0].children[1].style.setProperty("height","100%");
+    page2.children[0].children[1].style.zIndex ="5";
+  });
+  // 두번째 자기소개
+  page2.children[1].children[0].style.setProperty("transition", "height 1s");
+  page2.children[1].children[0].addEventListener("mouseover",function(){
+    page2.children[1].children[0].style.setProperty("height","500px")});
 
-page2.children[0].children[1].addEventListener("mouseout",function(){
-page2.children[0].children[1].style.setProperty("height","100%");
-page2.children[0].children[1].style.zIndex ="1";
-});
+  page2.children[1].children[0].addEventListener("mouseout",function(){
+    page2.children[1].children[0].style.setProperty("height","100%");
+    page2.children[1].children[0].style.zIndex ="4";
+  });
+
+  // 세번째 자기소개
+  page2.children[2].children[1].style.setProperty("transition", "height 1s");
+  page2.children[2].children[1].addEventListener("mouseover",function(){
+    page2.children[2].children[1].style.setProperty("height","500px")});
+
+  page2.children[2].children[1].addEventListener("mouseout",function(){
+    page2.children[2].children[1].style.setProperty("height","100%");
+    page2.children[2].children[1].style.zIndex ="3";
+  });
+
+  // 네번째 자기소개
+  page2.children[3].children[0].style.setProperty("transition", "height 1s");
+  page2.children[3].children[0].addEventListener("mouseover",function(){
+    page2.children[3].children[0].style.setProperty("height","500px")});
+
+  page2.children[3].children[0].addEventListener("mouseout",function(){
+    page2.children[3].children[0].style.setProperty("height","100%");
+    page2.children[3].children[0].style.zIndex ="2";
+  });
+
+  // 다섯번째 자기소개
+  page2.children[4].children[1].style.setProperty("transition", "height 1s");
+  page2.children[4].children[1].addEventListener("mouseover",function(){
+    page2.children[4].children[1].style.setProperty("height","500px")});
+
+  page2.children[4].children[1].addEventListener("mouseout",function(){
+    page2.children[4].children[1].style.setProperty("height","100%");
+    page2.children[4].children[1].style.zIndex ="1";
+  });
 };
 //   // 요소를 만들고 구조를 생성하는 부분
 //   const makeIntroduceBox = document.createElement('div');
