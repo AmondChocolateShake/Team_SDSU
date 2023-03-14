@@ -78,7 +78,10 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     const makeCircle = document.createElement(childElementOne);
     const makeBox = document.createElement(childElementTwo);
     page2.appendChild(makeIntroduceBox);
-
+    // 프로필 사진이 들어갈 circle에 id 부여 circle0 ~ circle4
+    makeCircle.setAttribute("id", `circle${i}`);
+    // 프로필 사진이 들어갈 Box에 id 부여 Box0 ~ Box4
+    makeBox.setAttribute("id", `box${i}`);
     
     // 짝수 번째의 박스 원은 배치를 바꿔주는 조건
     if(i%2 === 0) {
@@ -106,55 +109,82 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     
   };
   console.log(page2.children[0].children[1]);
+  console.log(box0);
+
   
   // 첫번째 자기소개
-  page2.children[0].children[1].style.setProperty("transition", "height 1s");
-  page2.children[0].children[1].addEventListener("mouseover",function(){
-    page2.children[0].children[1].style.setProperty("height","500px")});
+ box0.style.setProperty("transition", "height 1s");
+ box0.addEventListener("mouseover",function(){
+  box0.style.setProperty("height","500px")});
 
-  page2.children[0].children[1].addEventListener("mouseout",function(){
-    page2.children[0].children[1].style.setProperty("height","100%");
-    page2.children[0].children[1].style.zIndex ="5";
+  box0.addEventListener("mouseout",function(){
+    box0.style.setProperty("height","100%");
+    box0.style.zIndex ="5";
   });
   // 두번째 자기소개
-  page2.children[1].children[0].style.setProperty("transition", "height 1s");
-  page2.children[1].children[0].addEventListener("mouseover",function(){
-    page2.children[1].children[0].style.setProperty("height","500px")});
+  box1.style.setProperty("transition", "height 1s");
+  box1.addEventListener("mouseover",function(){
+    box1.style.setProperty("height","500px")});
 
-  page2.children[1].children[0].addEventListener("mouseout",function(){
-    page2.children[1].children[0].style.setProperty("height","100%");
-    page2.children[1].children[0].style.zIndex ="4";
+    box1.addEventListener("mouseout",function(){
+    box1.style.setProperty("height","100%");
+    box1.style.zIndex ="4";
   });
 
   // 세번째 자기소개
-  page2.children[2].children[1].style.setProperty("transition", "height 1s");
-  page2.children[2].children[1].addEventListener("mouseover",function(){
-    page2.children[2].children[1].style.setProperty("height","500px")});
+  box2.style.setProperty("transition", "height 1s");
+  box2.addEventListener("mouseover",function(){
+    box2.style.setProperty("height","500px")});
 
-  page2.children[2].children[1].addEventListener("mouseout",function(){
-    page2.children[2].children[1].style.setProperty("height","100%");
-    page2.children[2].children[1].style.zIndex ="3";
+  box2.addEventListener("mouseout",function(){
+    box2.style.setProperty("height","100%");
+    box2.style.zIndex ="3";
   });
 
   // 네번째 자기소개
-  page2.children[3].children[0].style.setProperty("transition", "height 1s");
-  page2.children[3].children[0].addEventListener("mouseover",function(){
-    page2.children[3].children[0].style.setProperty("height","500px")});
+  box3.style.setProperty("transition", "height 1s");
+  box3.addEventListener("mouseover",function(){
+    box3.style.setProperty("height","500px")});
 
-  page2.children[3].children[0].addEventListener("mouseout",function(){
-    page2.children[3].children[0].style.setProperty("height","100%");
-    page2.children[3].children[0].style.zIndex ="2";
+  box3.addEventListener("mouseout",function(){
+    box3.style.setProperty("height","100%");
+    box3.style.zIndex ="2";
   });
 
   // 다섯번째 자기소개
-  page2.children[4].children[1].style.setProperty("transition", "height 1s");
-  page2.children[4].children[1].addEventListener("mouseover",function(){
-    page2.children[4].children[1].style.setProperty("height","500px")});
+  box4.style.setProperty("transition", "height 1s");
+  box4.addEventListener("mouseover",function(){
+    box4.style.setProperty("height","500px")});
 
-  page2.children[4].children[1].addEventListener("mouseout",function(){
-    page2.children[4].children[1].style.setProperty("height","100%");
-    page2.children[4].children[1].style.zIndex ="1";
+  box4.addEventListener("mouseout",function(){
+    box4.style.setProperty("height","100%");
+    box4.style.zIndex ="1";
   });
+
+  console.log(circle0);
+  circle0.style.backgroundImage = 'url("./images.png")';
+  circle0.style.backgroundPosition = "center";
+  circle0.style.backgroundSize = "250px";
+  
+  
+  circle1.style.backgroundImage = 'url("./images.png")';
+  circle1.style.backgroundPosition = "center";
+  circle1.style.backgroundSize = "250px";
+  
+  
+  circle2.style.backgroundImage = 'url("./images.png")';
+  circle2.style.backgroundPosition = "center";
+  circle2.style.backgroundSize = "250px";
+  
+  
+  circle3.style.backgroundImage = 'url("./images.png")';
+  circle3.style.backgroundPosition = "center";
+  circle3.style.backgroundSize = "250px";
+  
+  
+  circle4.style.backgroundImage = 'url("./images.png")';
+  circle4.style.backgroundPosition = "center";
+  circle4.style.backgroundSize = "250px";
 };
 //   // 요소를 만들고 구조를 생성하는 부분
 //   const makeIntroduceBox = document.createElement('div');
