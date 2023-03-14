@@ -78,6 +78,8 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     const makeCircle = document.createElement(childElementOne);
     const makeBox = document.createElement(childElementTwo);
     page2.appendChild(makeIntroduceBox);
+
+    makeBox.setAttribute("id", `box${i}`);
     // 짝수 번째의 박스 원은 배치를 바꿔주는 조건
     if(i%2 === 0) {
       makeIntroduceBox.appendChild(makeCircle);
