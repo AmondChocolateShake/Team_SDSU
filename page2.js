@@ -110,16 +110,34 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   };
   console.log(page2.children[0].children[1]);
   console.log(box0);
-
+  //------------------------
+  box2.appendChild(myimg3);
+  box2.appendChild(mytexts3);
+  myimg3.appendChild(img);
   
   // 첫번째 자기소개
- box0.style.setProperty("transition", "height 1s");
- box0.addEventListener("mouseover",function(){
-  box0.style.setProperty("height","500px")});
+// let trans = false;
+// if (trans) {
+//   myimg.style.display="none";
+//   mytexts.style.display="none";
+//   trans = false;
+// } else {
+//   myimg.style.display="flex";
+//   mytexts.style.display="flex";
+//   trans = true;
+// }
+
+  box0.style.setProperty("transition", "height 1s");
+
+  box0.addEventListener("mouseover",function(){
+  box0.style.setProperty("height","500px")
+});
 
   box0.addEventListener("mouseout",function(){
     box0.style.setProperty("height","100%");
     box0.style.zIndex ="5";
+   
+
   });
   // 두번째 자기소개
   box1.style.setProperty("transition", "height 1s");
@@ -131,14 +149,23 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     box1.style.zIndex ="4";
   });
 
+  myimg3.style.display="none";
+  mytexts3.style.display="none";
   // 세번째 자기소개
   box2.style.setProperty("transition", "height 1s");
   box2.addEventListener("mouseover",function(){
-    box2.style.setProperty("height","500px")});
+    box2.style.setProperty("height","500px")
+    myimg3.style.display="flex";
+    mytexts3.style.display="flex";
+  }
+  );
 
   box2.addEventListener("mouseout",function(){
     box2.style.setProperty("height","100%");
     box2.style.zIndex ="3";
+    myimg3.style.display="none";
+    mytexts3.style.display="none";
+  
   });
 
   // 네번째 자기소개
@@ -186,62 +213,96 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   circle4.style.backgroundPosition = "center";
   circle4.style.backgroundSize = "250px";
 };
-//   // 요소를 만들고 구조를 생성하는 부분
-//   const makeIntroduceBox = document.createElement('div');
-//   const makeCircle = document.createElement('div');
-//   const makeBox = document.createElement('div');
-//   page2.appendChild(makeIntroduceBox);
-//   // 원, 사각형을 감싸는 div의 id, name 설정
-//   makeIntroduceBox.setAttribute(id, idName);
-//   // 원, 사각형을 하나의 div에 포함시키기
-//   makeIntroduceBox.appendChild(makeCircle);
-//   makeIntroduceBox.appendChild(makeBox);
 
-//   makeIntroduceBox.style.width = "100%";
-//   makeIntroduceBox.style.height = "15%"
-//   makeIntroduceBox.style.display = "flex";
-//   makeIntroduceBox.style.justifyContent = "space-around";
-//   makeIntroduceBox.style.alignContent = "center"
+// ----------------------
+// function elementMaker(tagName,target){
+//   const mytexts = document.createElement(tagName);
+//   const myimg = document.createElement(tagName);
+//   target.appendChild(mytexts);
+//   target.appendChild(myimg);
 
-//   makeCircle.style.width = "10%";
-//   makeCircle.style.height = "100%";
-//   makeCircle.style.backgroundColor = "#CB5F5F";
-//   makeCircle.style.borderRadius = "50%"
+// }
 
-//   makeBox.style.width = "70%";
-//   makeBox.style.height = "100%";
-//   makeBox.style.backgroundColor = "#62A0DA";
-//   makeBox.style.borderRadius = "20px";
-// };
+const myimg3 = document.createElement('div');
+const mytexts3 = document.createElement('div');
 
-// function introdueBoxMakerReverse(id, idName) {
-//   // 요소를 만들고 구조를 생성하는 부분
-//   const makeIntroduceBox = document.createElement('div');
-//   const makeCircle = document.createElement('div');
-//   const makeBox = document.createElement('div');
-//   page2.appendChild(makeIntroduceBox);
-// // 원, 사각형을 감싸는 div의 id, name 설정
-//   makeIntroduceBox.setAttribute(id, idName);
-//   // 원, 사각형을 하나의 div에 포함시키기
-//   makeIntroduceBox.appendChild(makeBox)
-//   makeIntroduceBox.appendChild(makeCircle);
+// mytexts >div 5
+for (let i = 0; i < 5; i++) {
+const text = document.createElement('div');
+    text.innerText = 'text';
+    text.style.width = '90%';
+    text.style.backgroundColor = 'gray';
+    text.style.display = 'flex';
+    text.style.flexDirection = 'center';
+    
+    if (i === 4) {
+    text.style.height = '25%';
+    text.style.margin = '2%';
 
-//   makeIntroduceBox.style.width = "100%";
-//   makeIntroduceBox.style.height = "15%"
-//   makeIntroduceBox.style.display = "flex";
-//   makeIntroduceBox.style.justifyContent = "space-around";
-//   makeIntroduceBox.style.alignContent = "center"
+    } else {
+    text.style.height = '15%';
+    text.style.margin = '2%';
+    }mytexts3.appendChild(text);
+}
+//----setStyle  
+function setStyle(element, styles) {
+    for (const property in styles) {
+        element.style[property] = styles[property];
+    }
+}
 
-//   makeCircle.style.width = "10%";
-//   makeCircle.style.height = "100%";
-//   makeCircle.style.backgroundColor = "#CB5F5F";
-//   makeCircle.style.borderRadius = "50%"
+//호출하기 page2
+// setStyle(page2, {
+//     display: 'flex',
+//     width: '400px',
+//     height: '900px',
+//     backgroundColor: 'gray',
+//     alignItems: 'center',
+//     flexDirection: 'column',
+// });
+//img
+setStyle(myimg3, {
+    display: 'flex',
+    width: '100%',
+    height: '30%',
+    backgroundColor: 'white',
+    borderRadius: '100px',
+});
+//text
+setStyle(mytexts3, {
+    display: 'flex',
+    width: '100%',
+    height: '70%',
+    backgroundColor: 'white',
+    alignItems: 'center',
+    flexDirection: 'column',
+    color: 'white',
+    borderRadius: '10px',
 
-//   makeBox.style.width = "70%";
-//   makeBox.style.height = "100%";
-//   makeBox.style.backgroundColor = "#62A0DA";
-//   makeBox.style.borderRadius = "20px";
-// };
+});
+
+const team = {
+    one:["사진","김동주","","","",""],
+    two:["사진","이재권","","","",""],
+    three:["사진","정지은","깃허브","je_eun2735@naver.com","서구","자기소개"],
+    four:["사진","최대건","","","",""],
+    five:["사진","임지성","","","",""]
+}
+
+
+let img = document.createElement('img');
+img.setAttribute('src','사진테스트.png');
+img.style.width = '100%';
+img.style.height = '100%';
+img.style.borderRadius ='100px';
+
+
+console.log(mytexts3.children[0]);
+mytexts3.children[0].innerText = team.three[1];
+mytexts3.children[1].innerText = team.three[2];
+mytexts3.children[2].innerText = team.three[3];
+mytexts3.children[3].innerText = team.three[4];
+mytexts3.children[4].innerText = team.three[5];
 
 
 
