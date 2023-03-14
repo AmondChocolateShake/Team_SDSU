@@ -79,7 +79,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     const makeBox = document.createElement(childElementTwo);
     page2.appendChild(makeIntroduceBox);
 
-    makeBox.setAttribute("id", `box${i}`);
+    
     // 짝수 번째의 박스 원은 배치를 바꿔주는 조건
     if(i%2 === 0) {
       makeIntroduceBox.appendChild(makeCircle);
@@ -103,7 +103,19 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     makeBox.style.height = "100%";
     makeBox.style.backgroundColor = "#62A0DA";
     makeBox.style.borderRadius = "20px";
+    
   };
+  console.log(page2.children[0].children[1]);
+  
+page2.children[0].children[1].style.setProperty("transition", "height 1s");
+page2.children[0].children[1].addEventListener("mouseover",function(){
+page2.children[0].children[1].style.setProperty("height","500px")});
+
+
+page2.children[0].children[1].addEventListener("mouseout",function(){
+page2.children[0].children[1].style.setProperty("height","100%");
+page2.children[0].children[1].style.zIndex ="1";
+});
 };
 //   // 요소를 만들고 구조를 생성하는 부분
 //   const makeIntroduceBox = document.createElement('div');
@@ -161,3 +173,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 //   makeBox.style.backgroundColor = "#62A0DA";
 //   makeBox.style.borderRadius = "20px";
 // };
+
+
+
+
