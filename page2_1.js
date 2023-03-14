@@ -112,8 +112,10 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   };
   console.log(page2.children[0].children[1]);
   console.log(box0);
+  
   //------------------------
- 
+
+  
   // 첫번째 자기소개
 // let trans = false;
 // if (trans) {
@@ -148,22 +150,22 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     box1.style.zIndex ="4";
   });
 
-  myimg3.style.display="none";
-  mytexts3.style.display="none";
+  // myimg3.style.display="none";
+  // mytexts3.style.display="none";
   // 세번째 자기소개
   box2.style.setProperty("transition", "height 1s");
   box2.addEventListener("mouseover",function(){
     box2.style.setProperty("height","500px")
-    myimg3.style.display="flex";
-    mytexts3.style.display="flex";
+    // myimg3.style.display="flex";
+    // mytexts3.style.display="flex";
   }
   );
 
   box2.addEventListener("mouseout",function(){
     box2.style.setProperty("height","100%");
     box2.style.zIndex ="3";
-    myimg3.style.display="none";
-    mytexts3.style.display="none";
+    // myimg3.style.display="none";
+    // mytexts3.style.display="none";
   
   });
 
@@ -214,29 +216,15 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 };
 
 // ----------------------
-
 function elementMaker(tagName,target){
-  for(i=0;i<5;i++){
-  `const mytexts${i}` = document.createElement(tagName);
-  `const myimg${i}` = document.createElement(tagName);
-  target.appendChild(`mytexts${i}`);
-  target.appendChild(`myimg${i}`);
-  }
+  const mytexts = document.createElement(tagName);
+  const myimg = document.createElement(tagName);
+  target.appendChild(mytexts);
+  target.appendChild(myimg);
+  
 }
-
-
-// const myimg1 = document.createElement('div');
-// box0.appendChild(myimg1);
-// const myimg2 = document.createElement('div');
-// const myimg3 = document.createElement('div');
-// const myimg4 = document.createElement('div');
-// const myimg5 = document.createElement('div');
-
-// const mytexts1 = document.createElement('div');
-// const mytexts2 = document.createElement('div');
-// const mytexts3 = document.createElement('div');
-// const mytexts4 = document.createElement('div');
-// const mytexts5 = document.createElement('div');
+elementMaker('div',page2); //->됨
+// elementMaker('div',box0); //box0 is not defined
 
 
 // mytexts >div 5
@@ -255,35 +243,16 @@ const text = document.createElement('div');
     } else {
     text.style.height = '15%';
     text.style.margin = '2%';
-    }`mytexts${i}`.appendChild(text);
+    }`mytexts${i}.appendChild(text)`;
 
-    setStyle(`myimg${i}`, {
-      display: 'flex',
-      width: '100%',
-      height: '30%',
-      backgroundColor: 'white',
-      borderRadius: '100px',
-  });
-  //text              
-  setStyle(`mytexts${i}`, {
-      display: 'flex',
-      width: '100%',
-      height: '70%',
-      backgroundColor: 'white',
-      alignItems: 'center',
-      flexDirection: 'column',
-      color: 'white',
-      borderRadius: '10px',
-  
-  });
-}
-//----setStyle  
-function setStyle(element, styles) {
-    for (const property in styles) {
-        element.style[property] = styles[property];
-    }
-}
+    
+    function setStyle(element, styles) {
+      for (const property in styles) {
+          element.style[property] = styles[property];
+      }
+  }
 
+}
 //호출하기 page2
 // setStyle(page2, {
 //     display: 'flex',
@@ -294,25 +263,25 @@ function setStyle(element, styles) {
 //     flexDirection: 'column',
 // });
 //img
-setStyle(myimg3, {
-    display: 'flex',
-    width: '100%',
-    height: '30%',
-    backgroundColor: 'white',
-    borderRadius: '100px',
-});
-//text
-setStyle(mytexts3, {
-    display: 'flex',
-    width: '100%',
-    height: '70%',
-    backgroundColor: 'white',
-    alignItems: 'center',
-    flexDirection: 'column',
-    color: 'white',
-    borderRadius: '10px',
+// setStyle(myimg3, {
+//     display: 'flex',
+//     width: '100%',
+//     height: '30%',
+//     backgroundColor: 'white',
+//     borderRadius: '100px',
+// });
+// //text
+// setStyle(mytexts3, {
+//     display: 'flex',
+//     width: '100%',
+//     height: '70%',
+//     backgroundColor: 'white',
+//     alignItems: 'center',
+//     flexDirection: 'column',
+//     color: 'white',
+//     borderRadius: '10px',
 
-});
+// });
 
 const team = {
     one:["사진","김동주","","","",""],
@@ -331,13 +300,11 @@ img.style.borderRadius ='100px';
 
 
 console.log(mytexts3.children[0]);
+
 mytexts3.children[0].innerText = team.three[1];
 mytexts3.children[1].innerText = team.three[2];
 mytexts3.children[2].innerText = team.three[3];
 mytexts3.children[3].innerText = team.three[4];
 mytexts3.children[4].innerText = team.three[5];
-
-
-
 
 
