@@ -99,17 +99,21 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   myimg4.appendChild(img4);
   myimg5.appendChild(img5);
   
+  for(let i = 0; i < myimgArray.length; i++) {
+    myimgArray[i].style.display = "none";
+    mytextsArray[i].style.display = "none";
+  };
 
-  myimg1.style.display="none";
-  mytexts1.style.display="none";
-  myimg2.style.display="none";
-  mytexts2.style.display="none";
-  myimg3.style.display="none";
-  mytexts3.style.display="none";
-  myimg4.style.display="none";
-  mytexts4.style.display="none";
-  myimg5.style.display="none";
-  mytexts5.style.display="none";
+  // myimg1.style.display="none";
+  // mytexts1.style.display="none";
+  // myimg2.style.display="none";
+  // mytexts2.style.display="none";
+  // myimg3.style.display="none";
+  // mytexts3.style.display="none";
+  // myimg4.style.display="none";
+  // mytexts4.style.display="none";
+  // myimg5.style.display="none";
+  // mytexts5.style.display="none";
   
 
 
@@ -181,11 +185,10 @@ const text3 = document.createElement('div');
 const text4 = document.createElement('div');
 const text5 = document.createElement('div');
 
-// myimg1.appendChild(img1);
-// myimg2.appendChild(img2);
-// myimg3.appendChild(img3);
-// myimg4.appendChild(img4);
-// myimg5.appendChild(img5);
+// for(let i = 1; i < myimgArray.length+1; i++) {
+  //   myimgArray[i].style.display = "none";
+  //   mytextsArray[i].style.display = "none";
+  // };
 
 const textArray = [text1, text2, text3, text4, text5];
 
