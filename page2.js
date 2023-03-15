@@ -282,7 +282,7 @@ for (let i = 0; i < 5; i++) {
     parent.appendChild(name);
     name.style.width="100%";
     name.style.height="20%";
-    name.style.backgroundColor="black";
+    name.style.backgroundColor="powderblue";
   }
 };
 
@@ -402,11 +402,11 @@ setStyle(mytexts5, {
 
 
 const team = {
-    one:["사진","김동주","","","",""],
-    two:["사진","이재권","","","",""],
-    three:["사진","정지은","깃허브","je_eun2735@naver.com","서구","자기소개"],
-    four:["사진","최대건","","","",""],
-    five:["사진","임지성","","","",""]
+    one:["사진","김동주","https://github.com/AmondChocolateShake","","세종",""],
+    two:["사진","이재권","https://github.com/nowkwon97","","서구",""],
+    three:["사진","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
+    four:["사진","최대건","https://github.com/DGChoi3904","","유성구",""],
+    five:["사진","임지성","https://github.com/WJKK21","","동구",""]
 }
 
 
