@@ -112,6 +112,10 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   console.log(box0);
 
   //------------------------
+  
+  
+  
+
   box0.appendChild(myimg1);
   box0.appendChild(mytexts1);
   box1.appendChild(myimg2);
@@ -150,106 +154,34 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 //   trans = true;
 // }
 
-  box0.style.setProperty("transition", "height 1s");
-
-  box0.addEventListener("mouseover",function(){
-  box0.style.setProperty("height","500px")
-  myimg1.style.display="flex";
-  mytexts1.style.display="flex";
-});
-
-  box0.addEventListener("mouseout",function(){
-    box0.style.setProperty("height","100%");
-    box0.style.zIndex ="5";
-    myimg1.style.display="none";
-    mytexts1.style.display="none";
-   
-
-  });
-  // 두번째 자기소개
-  box1.style.setProperty("transition", "height 1s");
-  box1.addEventListener("mouseover",function(){
-    box1.style.setProperty("height","500px")
-    myimg2.style.display="flex";
-    mytexts2.style.display="flex";});
-
-    box1.addEventListener("mouseout",function(){
-    box1.style.setProperty("height","100%");
-    box1.style.zIndex ="4";
-    myimg2.style.display="none";
-    mytexts2.style.display="none";
+// 자기소개 transition 적용 반복 구문
+  const boxArray = [box0, box1, box2, box3, box4];
+  const zIndexSize = [5, 4, 3, 2, 1];
+  for(let i = 0; i < 5; i++) {
+    boxArray[i].style.setProperty("transition", "height 1s");
+    boxArray[i].addEventListener("mouseover",function(){
+      boxArray[i].style.setProperty("height","500px")
+      myimgArray[i].style.display="flex";
+      mytextsArray[i].style.display="flex";
   });
 
- 
-  // 세번째 자기소개
-  box2.style.setProperty("transition", "height 1s");
-  box2.addEventListener("mouseover",function(){
-    box2.style.setProperty("height","500px")
-    myimg3.style.display="flex";
-    mytexts3.style.display="flex";
+  boxArray[i].addEventListener("mouseout",function(){
+    boxArray[i].style.setProperty("height","100%");
+    boxArray[i].style.zIndex =zIndexSize[i];
+    myimgArray[i].style.display="none";
+    mytextsArray[i].style.display="none";
+  });
   }
-  );
-
-  box2.addEventListener("mouseout",function(){
-    box2.style.setProperty("height","100%");
-    box2.style.zIndex ="3";
-    myimg3.style.display="none";
-    mytexts3.style.display="none";
   
-  });
-
-  // 네번째 자기소개
-  box3.style.setProperty("transition", "height 1s");
-  box3.addEventListener("mouseover",function(){
-    box3.style.setProperty("height","500px")
-    myimg4.style.display="flex";
-    mytexts4.style.display="flex";});
-
-  box3.addEventListener("mouseout",function(){
-    box3.style.setProperty("height","100%");
-    box3.style.zIndex ="2";
-    myimg4.style.display="none";
-    mytexts4.style.display="none";
-  });
-
-  // 다섯번째 자기소개
-  box4.style.setProperty("transition", "height 1s");
-  box4.addEventListener("mouseover",function(){
-    box4.style.setProperty("height","500px")
-    myimg5.style.display="flex";
-    mytexts5.style.display="flex";});
-
-  box4.addEventListener("mouseout",function(){
-    box4.style.setProperty("height","100%");
-    box4.style.zIndex ="1";
-    myimg5.style.display="none";
-    mytexts5.style.display="none";
-  });
+// 원에 프로필 사진을 넣는 반복 구문
+  const circleArray = [circle0, circle1, circle2, circle3, circle4];
 
   console.log(circle0);
-  circle0.style.backgroundImage = 'url("./images.png")';
-  circle0.style.backgroundPosition = "center";
-  circle0.style.backgroundSize = "250px";
-  
-  
-  circle1.style.backgroundImage = 'url("./images.png")';
-  circle1.style.backgroundPosition = "center";
-  circle1.style.backgroundSize = "250px";
-  
-  
-  circle2.style.backgroundImage = 'url("./images.png")';
-  circle2.style.backgroundPosition = "center";
-  circle2.style.backgroundSize = "250px";
-  
-  
-  circle3.style.backgroundImage = 'url("./images.png")';
-  circle3.style.backgroundPosition = "center";
-  circle3.style.backgroundSize = "250px";
-  
-  
-  circle4.style.backgroundImage = 'url("./images.png")';
-  circle4.style.backgroundPosition = "center";
-  circle4.style.backgroundSize = "250px";
+  for (let i = 0; i < 5; i++) {
+    circleArray[i].style.backgroundImage = 'url("./images.png")';
+    circleArray[i].style.backgroundPosition = "center";
+    circleArray[i].style.backgroundSize = "250px";
+  }
 };
 
 // ----------------------
@@ -271,7 +203,17 @@ const mytexts4 = document.createElement('div');
 const myimg5 = document.createElement('div');
 const mytexts5 = document.createElement('div');
 
+  const text1 = document.createElement('div');
+  const text2 = document.createElement('div');
+  const text3 = document.createElement('div');
+  const text4 = document.createElement('div');
+  const text5 = document.createElement('div');
+  const textArray = [text1, text2, text3, text4, text5];
 
+  // myimg 배열 생성
+  const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
+  // mytext 배열 생성
+  const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
 // let textArray = [text1,text2,text3,text4,text5];
 
