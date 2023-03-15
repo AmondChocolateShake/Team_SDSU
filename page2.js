@@ -217,26 +217,48 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
 
-for(let i = 0; i < 5; i++) {
-  for(let j = 0; j < 5; j++) {
-    // const asd = document.createElement('div');
-    textArray[j].innerText = 'text';
-    textArray[j].style.width = '90%';
-    textArray[j].style.backgroundColor = 'gray';
-    textArray[j].style.display = 'flex';
-    textArray[j].style.flexDirection = 'center';
+function createTextDiv() {
+  for(let i =0; i < 5; i++) {
+    const text = document.createElement('div');
+    text.innerText = 'text';
+    text.style.width = '90%';
+    text.style.backgroundColor = 'gray';
+    text.style.display = 'flex';
+    text.style.flexDirection = 'center';
     
-    if (j === 4) {
-      textArray[j].style.height = '25%';
-      textArray[j].style.margin = '2%';
+    if (i === 4) {
+      text.style.height = '25%';
+      text.style.margin = '2%';
 
     } else {
-      textArray[j].style.height = '15%';
-      textArray[j].style.margin = '2%';
+      text.style.height = '15%';
+      text.style.margin = '2%';
     }
-  };
-  mytextsArray[i].appendChild(textArray[i]);
+  }
 };
+// appenChild()에 함수적용 X
+for(let i = 0; i < 5; i++) {
+  mytextsArray[i].appendChild(createTextDiv());
+};
+
+  // for(let j = 0; j < 5; j++) {
+  //   // const asd = document.createElement('div');
+  //   textArray[j].innerText = 'text';
+  //   textArray[j].style.width = '90%';
+  //   textArray[j].style.backgroundColor = 'gray';
+  //   textArray[j].style.display = 'flex';
+  //   textArray[j].style.flexDirection = 'center';
+    
+  //   if (j === 4) {
+  //     textArray[j].style.height = '25%';
+  //     textArray[j].style.margin = '2%';
+
+  //   } else {
+  //     textArray[j].style.height = '15%';
+  //     textArray[j].style.margin = '2%';
+  //   }
+  //   mytextsArray[j].appendChild(textArray[j]);
+  // };
 
 // for (let i = 0; i < 5; i++) {
 // const text = document.createElement('div');
