@@ -76,35 +76,12 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   box4.appendChild(mytexts5);
   myimg3.appendChild(img);
 
-  // for(let i=1; i<myimgArray.lenght+1;i++ ){
-  //   myimgArray[i].style.display="none";
-  //   mytextsArray[i].style.display="none";
-  // };
-  // for (let i = 1; i <= 5; i++) {
-  //   const img = document.querySelector(`#myimg${i}`);
-  //   const texts = document.querySelector(`#mytexts${i}`);
-  //   img.style.display = 'none';
-  //   texts.style.display = 'none';
-  // }
-  // for (let i = 1; i <=5; i++) {
-  //   myimgArray[i].style.display = 'none';
-  //   mytextsArray[i].style.display = 'none';
-  // }
-// console.log(myimgArray[0]);--> 결과값 <div>-</div>
 
 
-  myimg1.style.display="none";
-  mytexts1.style.display="none";
-  myimg2.style.display="none";
-  mytexts2.style.display="none";
-  myimg3.style.display="none";
-  mytexts3.style.display="none";
-  myimg4.style.display="none";
-  mytexts4.style.display="none";
-  myimg5.style.display="none";
-  mytexts5.style.display="none";
-  
-
+for(let i = 0; i < myimgArray.length; i++) {
+  myimgArray[i].style.display = "none";
+  mytextsArray[i].style.display = "none";
+};
 
   // 첫번째 자기소개
 
