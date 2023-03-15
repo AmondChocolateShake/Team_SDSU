@@ -110,12 +110,35 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   };
   console.log(page2.children[0].children[1]);
   console.log(box0);
+
   //------------------------
+  box0.appendChild(myimg1);
+  box0.appendChild(mytexts1);
+  box1.appendChild(myimg2);
+  box1.appendChild(mytexts2);
   box2.appendChild(myimg3);
   box2.appendChild(mytexts3);
+  box3.appendChild(myimg4);
+  box3.appendChild(mytexts4);
+  box4.appendChild(myimg5);
+  box4.appendChild(mytexts5);
   myimg3.appendChild(img);
+
+  myimg1.style.display="none";
+  mytexts1.style.display="none";
+  myimg2.style.display="none";
+  mytexts2.style.display="none";
+  myimg3.style.display="none";
+  mytexts3.style.display="none";
+  myimg4.style.display="none";
+  mytexts4.style.display="none";
+  myimg5.style.display="none";
+  mytexts5.style.display="none";
   
+
+
   // 첫번째 자기소개
+
 // let trans = false;
 // if (trans) {
 //   myimg.style.display="none";
@@ -131,26 +154,33 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
   box0.addEventListener("mouseover",function(){
   box0.style.setProperty("height","500px")
+  myimg1.style.display="flex";
+  mytexts1.style.display="flex";
 });
 
   box0.addEventListener("mouseout",function(){
     box0.style.setProperty("height","100%");
     box0.style.zIndex ="5";
+    myimg1.style.display="none";
+    mytexts1.style.display="none";
    
 
   });
   // 두번째 자기소개
   box1.style.setProperty("transition", "height 1s");
   box1.addEventListener("mouseover",function(){
-    box1.style.setProperty("height","500px")});
+    box1.style.setProperty("height","500px")
+    myimg2.style.display="flex";
+    mytexts2.style.display="flex";});
 
     box1.addEventListener("mouseout",function(){
     box1.style.setProperty("height","100%");
     box1.style.zIndex ="4";
+    myimg2.style.display="none";
+    mytexts2.style.display="none";
   });
 
-  myimg3.style.display="none";
-  mytexts3.style.display="none";
+ 
   // 세번째 자기소개
   box2.style.setProperty("transition", "height 1s");
   box2.addEventListener("mouseover",function(){
@@ -171,21 +201,29 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   // 네번째 자기소개
   box3.style.setProperty("transition", "height 1s");
   box3.addEventListener("mouseover",function(){
-    box3.style.setProperty("height","500px")});
+    box3.style.setProperty("height","500px")
+    myimg4.style.display="flex";
+    mytexts4.style.display="flex";});
 
   box3.addEventListener("mouseout",function(){
     box3.style.setProperty("height","100%");
     box3.style.zIndex ="2";
+    myimg4.style.display="none";
+    mytexts4.style.display="none";
   });
 
   // 다섯번째 자기소개
   box4.style.setProperty("transition", "height 1s");
   box4.addEventListener("mouseover",function(){
-    box4.style.setProperty("height","500px")});
+    box4.style.setProperty("height","500px")
+    myimg5.style.display="flex";
+    mytexts5.style.display="flex";});
 
   box4.addEventListener("mouseout",function(){
     box4.style.setProperty("height","100%");
     box4.style.zIndex ="1";
+    myimg5.style.display="none";
+    mytexts5.style.display="none";
   });
 
   console.log(circle0);
@@ -223,8 +261,17 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
 // }
 
+const myimg1 = document.createElement('div');
+const mytexts1 = document.createElement('div');
+const myimg2 = document.createElement('div');
+const mytexts2 = document.createElement('div');
 const myimg3 = document.createElement('div');
 const mytexts3 = document.createElement('div');
+const myimg4 = document.createElement('div');
+const mytexts4 = document.createElement('div');
+const myimg5 = document.createElement('div');
+const mytexts5 = document.createElement('div');
+
 
 // mytexts >div 5
 for (let i = 0; i < 5; i++) {
@@ -242,7 +289,10 @@ const text = document.createElement('div');
     } else {
     text.style.height = '15%';
     text.style.margin = '2%';
-    }mytexts3.appendChild(text);
+    }
+    mytexts3.appendChild(text);
+    
+
 }
 //----setStyle  
 function setStyle(element, styles) {
@@ -250,26 +300,34 @@ function setStyle(element, styles) {
         element.style[property] = styles[property];
     }
 }
+setStyle(myimg1, {
+  display: 'flex',
+  width: '100%',
+  height: '30%',
+  backgroundColor: 'white',
+  borderRadius: '100px',
+});
+//text
+setStyle(mytexts1, {
+  display: 'flex',
+  width: '100%',
+  height: '70%',
+  backgroundColor: 'white',
+  alignItems: 'center',
+  flexDirection: 'column',
+  color: 'white',
+  borderRadius: '10px',
 
-//호출하기 page2
-// setStyle(page2, {
-//     display: 'flex',
-//     width: '400px',
-//     height: '900px',
-//     backgroundColor: 'gray',
-//     alignItems: 'center',
-//     flexDirection: 'column',
-// });
-//img
-setStyle(myimg3, {
+});
+
+setStyle(myimg2, {
     display: 'flex',
     width: '100%',
     height: '30%',
     backgroundColor: 'white',
     borderRadius: '100px',
 });
-//text
-setStyle(mytexts3, {
+setStyle(mytexts2, {
     display: 'flex',
     width: '100%',
     height: '70%',
@@ -280,6 +338,64 @@ setStyle(mytexts3, {
     borderRadius: '10px',
 
 });
+setStyle(myimg3, {
+  display: 'flex',
+  width: '100%',
+  height: '30%',
+  backgroundColor: 'white',
+  borderRadius: '100px',
+});
+//text
+setStyle(mytexts3, {
+  display: 'flex',
+  width: '100%',
+  height: '70%',
+  backgroundColor: 'white',
+  alignItems: 'center',
+  flexDirection: 'column',
+  color: 'white',
+  borderRadius: '10px',
+
+});
+setStyle(myimg4, {
+  display: 'flex',
+  width: '100%',
+  height: '30%',
+  backgroundColor: 'white',
+  borderRadius: '100px',
+});
+//text
+setStyle(mytexts4, {
+  display: 'flex',
+  width: '100%',
+  height: '70%',
+  backgroundColor: 'white',
+  alignItems: 'center',
+  flexDirection: 'column',
+  color: 'white',
+  borderRadius: '10px',
+
+});
+setStyle(myimg5, {
+  display: 'flex',
+  width: '100%',
+  height: '30%',
+  backgroundColor: 'white',
+  borderRadius: '100px',
+});
+//text
+setStyle(mytexts5, {
+  display: 'flex',
+  width: '100%',
+  height: '70%',
+  backgroundColor: 'white',
+  alignItems: 'center',
+  flexDirection: 'column',
+  color: 'white',
+  borderRadius: '10px',
+
+});
+
 
 const team = {
     one:["사진","김동주","","","",""],
