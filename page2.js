@@ -169,17 +169,17 @@ const mytexts4 = document.createElement('div');
 const myimg5 = document.createElement('div');
 const mytexts5 = document.createElement('div');
 
-  const text1 = document.createElement('div');
-  const text2 = document.createElement('div');
-  const text3 = document.createElement('div');
-  const text4 = document.createElement('div');
-  const text5 = document.createElement('div');
-  const textArray = [text1, text2, text3, text4, text5];
+const text1 = document.createElement('div');
+const text2 = document.createElement('div');
+const text3 = document.createElement('div');
+const text4 = document.createElement('div');
+const text5 = document.createElement('div');
+const textArray = [text1, text2, text3, text4, text5];
 
-  // myimg 배열 생성
-  const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
-  // mytext 배열 생성
-  const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
+// myimg 배열 생성
+const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
+// mytext 배열 생성
+const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
 // let textArray = [text1,text2,text3,text4,text5];
 
