@@ -446,36 +446,56 @@ img5.style.width = '100%';
 img5.style.height = '100%';
 img5.style.borderRadius ='100px';
 
+console.dir(team);
+const teamArray = Object.entries(team);
+console.dir(teamArray);
+console.dir(teamArray[0]); // one 과 one의 값들
+console.dir(teamArray[0][0]); // one
+console.dir(teamArray[0][1]); // team.one의 값들
+console.dir(teamArray[0][1][0]); // 사진
+console.dir(teamArray[0][1][1]); // 김동주
+console.dir(teamArray[0][1][2]); // 깃헙주소
 
-mytexts1.children[0].innerText = team.one[1];
-mytexts1.children[1].innerText = team.one[2];
-mytexts1.children[2].innerText = team.one[3];
-mytexts1.children[3].innerText = team.one[4];
-mytexts1.children[4].innerText = team.one[5];
+// let img = document.createElement('img');
+// img.setAttribute('src','사진테스트.png');
+// img.style.width = '100%';
+// img.style.height = '100%';
+// img.style.borderRadius ='100px';
+for(let i = 0; i < 5; i++){
+  for(let j = 0; j < 5; j++) {
+    mytextsArray[i].children[j].innerText = teamArray[i][1][j];
+  };
+};
 
-mytexts2.children[0].innerText = team.two[1];
-mytexts2.children[1].innerText = team.two[2];
-mytexts2.children[2].innerText = team.two[3];
-mytexts2.children[3].innerText = team.two[4];
-mytexts2.children[4].innerText = team.two[5];
+// mytexts1.children[0].innerText = team.one[1];
+// mytexts1.children[1].innerText = team.one[2];
+// mytexts1.children[2].innerText = team.one[3];
+// mytexts1.children[3].innerText = team.one[4];
+// mytexts1.children[4].innerText = team.one[5];
 
-mytexts3.children[0].innerText = team.three[1];
-mytexts3.children[1].innerText = team.three[2];
-mytexts3.children[2].innerText = team.three[3];
-mytexts3.children[3].innerText = team.three[4];
-mytexts3.children[4].innerText = team.three[5];
+// mytexts2.children[0].innerText = team.two[1];
+// mytexts2.children[1].innerText = team.two[2];
+// mytexts2.children[2].innerText = team.two[3];
+// mytexts2.children[3].innerText = team.two[4];
+// mytexts2.children[4].innerText = team.two[5];
 
-mytexts4.children[0].innerText = team.four[1];
-mytexts4.children[1].innerText = team.four[2];
-mytexts4.children[2].innerText = team.four[3];
-mytexts4.children[3].innerText = team.four[4];
-mytexts4.children[4].innerText = team.four[5];
+// mytexts3.children[0].innerText = team.three[1];
+// mytexts3.children[1].innerText = team.three[2];
+// mytexts3.children[2].innerText = team.three[3];
+// mytexts3.children[3].innerText = team.three[4];
+// mytexts3.children[4].innerText = team.three[5];
 
-mytexts5.children[0].innerText = team.five[1];
-mytexts5.children[1].innerText = team.five[2];
-mytexts5.children[2].innerText = team.five[3];
-mytexts5.children[3].innerText = team.five[4];
-mytexts5.children[4].innerText = team.five[5];
+// mytexts4.children[0].innerText = team.four[1];
+// mytexts4.children[1].innerText = team.four[2];
+// mytexts4.children[2].innerText = team.four[3];
+// mytexts4.children[3].innerText = team.four[4];
+// mytexts4.children[4].innerText = team.four[5];
+
+// mytexts5.children[0].innerText = team.five[1];
+// mytexts5.children[1].innerText = team.five[2];
+// mytexts5.children[2].innerText = team.five[3];
+// mytexts5.children[3].innerText = team.five[4];
+// mytexts5.children[4].innerText = team.five[5];
 
 
 
