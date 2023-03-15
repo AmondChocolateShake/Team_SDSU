@@ -48,9 +48,9 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     const makeCircle = document.createElement(childElementOne);
     const makeBox = document.createElement(childElementTwo);
     page2.appendChild(makeIntroduceBox);
-    // 프로필 사진이 들어갈 circle에 id 부여 circle0 ~ circle4
+    // 프로필 images.png이 들어갈 circle에 id 부여 circle0 ~ circle4
     makeCircle.setAttribute("id", `circle${i}`);
-    // 프로필 사진이 들어갈 Box에 id 부여 Box0 ~ Box4
+    // 프로필 images.png이 들어갈 Box에 id 부여 Box0 ~ Box4
     makeBox.setAttribute("id", `box${i}`);
     
     // 짝수 번째의 박스 원은 배치를 바꿔주는 조건
@@ -92,7 +92,15 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   box3.appendChild(mytexts4);
   box4.appendChild(myimg5);
   box4.appendChild(mytexts5);
-  myimg3.appendChild(img);
+
+  myimg1.appendChild(img1);
+  myimg2.appendChild(img2);
+  myimg3.appendChild(img3);
+  myimg4.appendChild(img4);
+  myimg5.appendChild(img5);
+
+
+  
 
   myimg1.style.display="none";
   mytexts1.style.display="none";
@@ -193,13 +201,11 @@ for (let i = 0; i < 5; i++) {
     name.style.backgroundColor="powderblue";
   }
 };
-
 textMaker('text1',mytexts1);
 textMaker('text2',mytexts2);
 textMaker('text3',mytexts3);
 textMaker('text4',mytexts4);
 textMaker('text5',mytexts5);
-
 
 
 
@@ -214,7 +220,7 @@ function setStyle(element, styles) {
 }
 setStyle(myimg1, {
   display: 'flex',
-  width: '100%',
+  width: '50%',
   height: '30%',
   backgroundColor: 'white',
   borderRadius: '100px',
@@ -234,11 +240,12 @@ setStyle(mytexts1, {
 
 setStyle(myimg2, {
     display: 'flex',
-    width: '100%',
+    width: '50%',
     height: '30%',
     backgroundColor: 'white',
     borderRadius: '100px',
 });
+
 setStyle(mytexts2, {
     display: 'flex',
     width: '100%',
@@ -252,7 +259,7 @@ setStyle(mytexts2, {
 });
 setStyle(myimg3, {
   display: 'flex',
-  width: '100%',
+  width: '50%',
   height: '30%',
   backgroundColor: 'white',
   borderRadius: '100px',
@@ -271,7 +278,7 @@ setStyle(mytexts3, {
 });
 setStyle(myimg4, {
   display: 'flex',
-  width: '100%',
+  width: '50%',
   height: '30%',
   backgroundColor: 'white',
   borderRadius: '100px',
@@ -290,7 +297,7 @@ setStyle(mytexts4, {
 });
 setStyle(myimg5, {
   display: 'flex',
-  width: '100%',
+  width: '50%',
   height: '30%',
   backgroundColor: 'white',
   borderRadius: '100px',
@@ -310,11 +317,11 @@ setStyle(mytexts5, {
 
 
 const team = {
-    one:["사진","김동주","https://github.com/AmondChocolateShake","","세종",""],
-    two:["사진","이재권","https://github.com/nowkwon97","","서구",""],
-    three:["사진","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
-    four:["사진","최대건","https://github.com/DGChoi3904","","유성구",""],
-    five:["사진","임지성","https://github.com/WJKK21","","동구",""]
+    one:["images.png","김동주","https://github.com/AmondChocolateShake","","세종",""],
+    two:["images.png","이재권","https://github.com/nowkwon97","","서구","프론트와 백을 자유롭게 다루는 풀스텍 개발자가 되기위해 노력중인 개발자입니다. 앞으로의 모습을 기대해주시기 바랍니다!"],
+    three:["images.png","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
+    four:["images.png","최대건","https://github.com/DGChoi3904","","유성구",""],
+    five:["images.png","임지성","https://github.com/WJKK21","","동구",""]
 }
 // 반복문 참조를 위한 team객체 배열로 만듦
 const teamArray = Object.entries(team);
@@ -328,11 +335,6 @@ console.dir(teamArray[0][1][0]); // team.one의 사진
 console.dir(teamArray[0][1][1]); // team.one의 김동주
 console.dir(teamArray[0][1][2]); // team.one의 깃헙주소
 
-let img = document.createElement('img');
-img.setAttribute('src','사진테스트.png');
-img.style.width = '100%';
-img.style.height = '100%';
-img.style.borderRadius ='100px';
 
 // 반복문을 통한 mytext에 team 값들로 채우기
 for(let i = 0; i < 5; i++){
