@@ -219,7 +219,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
 for(let i = 0; i < 5; i++) {
   for(let j = 0; j < 5; j++) {
-    const asd = document.createElement('div');
+    // const asd = document.createElement('div');
     textArray[j].innerText = 'text';
     textArray[j].style.width = '90%';
     textArray[j].style.backgroundColor = 'gray';
