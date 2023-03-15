@@ -226,30 +226,14 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     mytexts5.style.display="none";
   });
 
+  const circleArray = [circle0, circle1, circle2, circle3, circle4];
+
   console.log(circle0);
-  circle0.style.backgroundImage = 'url("./images.png")';
-  circle0.style.backgroundPosition = "center";
-  circle0.style.backgroundSize = "250px";
-  
-  
-  circle1.style.backgroundImage = 'url("./images.png")';
-  circle1.style.backgroundPosition = "center";
-  circle1.style.backgroundSize = "250px";
-  
-  
-  circle2.style.backgroundImage = 'url("./images.png")';
-  circle2.style.backgroundPosition = "center";
-  circle2.style.backgroundSize = "250px";
-  
-  
-  circle3.style.backgroundImage = 'url("./images.png")';
-  circle3.style.backgroundPosition = "center";
-  circle3.style.backgroundSize = "250px";
-  
-  
-  circle4.style.backgroundImage = 'url("./images.png")';
-  circle4.style.backgroundPosition = "center";
-  circle4.style.backgroundSize = "250px";
+  for (let i = 0; i < 5; i++) {
+    circleArray[i].style.backgroundImage = 'url("./images.png")';
+    circleArray[i].style.backgroundPosition = "center";
+    circleArray[i].style.backgroundSize = "250px";
+  }
 };
 
 // ----------------------
