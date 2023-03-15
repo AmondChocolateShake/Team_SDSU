@@ -33,37 +33,7 @@ function page2DomStyling (object) {
   };
 };
 page2DomStyling(page2DomStyle);
-///
-// // 원과 박스를 감싸는 div
-// const makeIntroduceBox1 = document.createElement('div');
-// // 원
-// const makeCircle = document.createElement('div');
-// // 박스
-// const makeBox = document.createElement('div');
-// // page2에 원과 박스를 감싸는 div 추가
-// page2.appendChild(makeIntroduceBox1);
-// // 원과 박스를 감싸는 div 에 원, 박스 추가
-// makeIntroduceBox1.appendChild(makeCircle);
-// makeIntroduceBox1.appendChild(makeBox)
-// // 원과 박스를 감싸는 박스에 id = box1 설정
-// makeIntroduceBox1.setAttribute('id', 'box1');
-// /// makeIntroduceBox1 style 설정
-// // width, height 설정
-// makeIntroduceBox1.style.width = "100%";
-// makeIntroduceBox1.style.height = "20%";
-// // flex 설정
-// makeIntroduceBox1.style.display = "flex";
-// makeIntroduceBox1.style.justifyContent = "space-around";
-// makeIntroduceBox1.style.alignContent = "center";
-// /// makeCircle style 설정
-// makeCircle.style.width = "15%";
-// makeCircle.style.height = "100%";
-// makeCircle.style.backgroundColor = "#CB5F5F";
-// makeCircle.style.borderRadius = "50%";
-// /// makeBox style 설정
-// makeBox.style.width = "60%";
-// makeBox.style.height = "100%";
-// makeBox.style.backgroundColor = "#62A0DA"
+
 
 // 함수 두개를 쓰지말고 한 함수의 조건을 바꿔보자.
 // 조건을 걸어서 짝수 번째의 introduceBox는 원과 박스의 위치가 바뀌게 해야한다..
@@ -112,10 +82,6 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   console.log(box0);
 
   //------------------------
-  
-  
-  
-
   box0.appendChild(myimg1);
   box0.appendChild(mytexts1);
   box1.appendChild(myimg2);
