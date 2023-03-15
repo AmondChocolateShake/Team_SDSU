@@ -1,24 +1,6 @@
 const root = document.getElementById('root');
 const page2 = document.getElementById('page2');
-// page2 style
-// page2.style.width = "100vw";
-// page2.style.height = "100vh";
-// page2.style.backgroundColor = "#AADF7F";
-// page2.style.display = "flex";
-// page2.style.flexDirection = "column";
-// page2.style.justifyContent = "space-around";
-// page2.style.alignContent = "center-around";
 
-/// 객체화 진행 중
-// const page2StyleObject = ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"];
-// const page2StyleValue = ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"];
-
-// function page2Domstyling (firstArray, secondArray, element) {
-//   for (let i = 0; i < firstArray.length; i++) {
-//     element.style[firstArray[i]] = secondArray[i];
-//   };
-// };
-// page2Domstyling(page2StyleObject, page2StyleValue, page2);
 
 // page2 style 객체
 let page2DomStyle = {
@@ -109,16 +91,6 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
   // 첫번째 자기소개
 
-// let trans = false;
-// if (trans) {
-//   myimg.style.display="none";
-//   mytexts.style.display="none";
-//   trans = false;
-// } else {
-//   myimg.style.display="flex";
-//   mytexts.style.display="flex";
-//   trans = true;
-// }
 
 // 자기소개 transition 적용 반복 구문
   const boxArray = [box0, box1, box2, box3, box4];
@@ -150,14 +122,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   }
 };
 
-// ----------------------
-// function elementMaker(tagName,target){
-//   const mytexts = document.createElement(tagName);
-//   const myimg = document.createElement(tagName);
-//   target.appendChild(mytexts);
-//   target.appendChild(myimg);
 
-// }
 const myimg1 = document.createElement('div');
 const mytexts1 = document.createElement('div');
 const myimg2 = document.createElement('div');
@@ -201,26 +166,21 @@ textMaker('text4',mytexts4);
 textMaker('text5',mytexts5);
 
 
-
-
-
-
-
 //----setStyle  
 function setStyle(element, styles) {
     for (const property in styles) {
         element.style[property] = styles[property];
     }
 }
-setStyle(myimg1, {
+const styles = {
   display: 'flex',
   width: '100%',
   height: '30%',
   backgroundColor: 'white',
   borderRadius: '100px',
-});
-//text
-setStyle(mytexts1, {
+};
+
+const textStyles = {
   display: 'flex',
   width: '100%',
   height: '70%',
@@ -229,84 +189,20 @@ setStyle(mytexts1, {
   flexDirection: 'column',
   color: 'white',
   borderRadius: '10px',
+};
 
-});
+setStyle(myimg1, styles);
+setStyle(mytexts1, textStyles);
+setStyle(myimg2, styles);
+setStyle(mytexts2, textStyles);
+setStyle(myimg3, styles);
+setStyle(mytexts3, textStyles);
+setStyle(myimg4, styles);
+setStyle(mytexts4, textStyles);
+setStyle(myimg5, styles);
+setStyle(mytexts5, textStyles);
 
-setStyle(myimg2, {
-    display: 'flex',
-    width: '100%',
-    height: '30%',
-    backgroundColor: 'white',
-    borderRadius: '100px',
-});
-setStyle(mytexts2, {
-    display: 'flex',
-    width: '100%',
-    height: '70%',
-    backgroundColor: 'white',
-    alignItems: 'center',
-    flexDirection: 'column',
-    color: 'white',
-    borderRadius: '10px',
-
-});
-setStyle(myimg3, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts3, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
-
-});
-setStyle(myimg4, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts4, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
-
-});
-setStyle(myimg5, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts5, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
-
-});
+//-------------------
 
 
 const team = {
@@ -336,35 +232,6 @@ for(let i = 0; i < 5; i++){
     mytextsArray[i].children[j].innerText = teamArray[i][1][j];
   };
 };
-// mytexts1.children[0].innerText = team.one[1];
-// mytexts1.children[1].innerText = team.one[2];
-// mytexts1.children[2].innerText = team.one[3];
-// mytexts1.children[3].innerText = team.one[4];
-// mytexts1.children[4].innerText = team.one[5];
-
-// mytexts2.children[0].innerText = team.two[1];
-// mytexts2.children[1].innerText = team.two[2];
-// mytexts2.children[2].innerText = team.two[3];
-// mytexts2.children[3].innerText = team.two[4];
-// mytexts2.children[4].innerText = team.two[5];
-
-// mytexts3.children[0].innerText = team.three[1];
-// mytexts3.children[1].innerText = team.three[2];
-// mytexts3.children[2].innerText = team.three[3];
-// mytexts3.children[3].innerText = team.three[4];
-// mytexts3.children[4].innerText = team.three[5];
-
-// mytexts4.children[0].innerText = team.four[1];
-// mytexts4.children[1].innerText = team.four[2];
-// mytexts4.children[2].innerText = team.four[3];
-// mytexts4.children[3].innerText = team.four[4];
-// mytexts4.children[4].innerText = team.four[5];
-
-// mytexts5.children[0].innerText = team.five[1];
-// mytexts5.children[1].innerText = team.five[2];
-// mytexts5.children[2].innerText = team.five[3];
-// mytexts5.children[3].innerText = team.five[4];
-// mytexts5.children[4].innerText = team.five[5];
 
 
 
