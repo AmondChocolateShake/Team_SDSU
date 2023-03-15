@@ -92,7 +92,13 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   box3.appendChild(mytexts4);
   box4.appendChild(myimg5);
   box4.appendChild(mytexts5);
-  myimg3.appendChild(img);
+  // 이미지 파일을 각 프로필 상세보기에 붙여줌
+  myimg1.appendChild(img1);
+  myimg2.appendChild(img2);
+  myimg3.appendChild(img3);
+  myimg4.appendChild(img4);
+  myimg5.appendChild(img5);
+  
 
   myimg1.style.display="none";
   mytexts1.style.display="none";
@@ -174,6 +180,13 @@ const text2 = document.createElement('div');
 const text3 = document.createElement('div');
 const text4 = document.createElement('div');
 const text5 = document.createElement('div');
+
+// myimg1.appendChild(img1);
+// myimg2.appendChild(img2);
+// myimg3.appendChild(img3);
+// myimg4.appendChild(img4);
+// myimg5.appendChild(img5);
+
 const textArray = [text1, text2, text3, text4, text5];
 
 // myimg 배열 생성
@@ -310,11 +323,11 @@ setStyle(mytexts5, {
 
 
 const team = {
-    one:["사진","김동주","https://github.com/AmondChocolateShake","","세종",""],
-    two:["사진","이재권","https://github.com/nowkwon97","","서구",""],
-    three:["사진","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
-    four:["사진","최대건","https://github.com/DGChoi3904","","유성구",""],
-    five:["사진","임지성","https://github.com/WJKK21","","동구",""]
+    one:["images.png","김동주","https://github.com/AmondChocolateShake","","세종",""],
+    two:["images.png","이재권","https://github.com/nowkwon97","","서구",""],
+    three:["images.png","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
+    four:["images.png","최대건","https://github.com/DGChoi3904","","유성구",""],
+    five:["images.png","임지성","https://github.com/WJKK21","","동구",""]
 }
 console.dir(team);
 const teamArray = Object.entries(team);
@@ -326,11 +339,37 @@ console.dir(teamArray[0][1][0]); // 사진
 console.dir(teamArray[0][1][1]); // 김동주
 console.dir(teamArray[0][1][2]); // 깃헙주소
 
-let img = document.createElement('img');
-img.setAttribute('src','사진테스트.png');
-img.style.width = '100%';
-img.style.height = '100%';
-img.style.borderRadius ='100px';
+// 각 프로필 상세보기 시 나오는 이미지
+let img1 = document.createElement('img');
+img1.setAttribute('src','images.png');
+img1.style.width = '100%';
+img1.style.height = '100%';
+img1.style.borderRadius ='100px';
+
+let img2 = document.createElement('img');
+img2.setAttribute('src','images.png');
+img2.style.width = '100%';
+img2.style.height = '100%';
+img2.style.borderRadius ='100px';
+
+let img3 = document.createElement('img');
+img3.setAttribute('src','images.png');
+img3.style.width = '100%';
+img3.style.height = '100%';
+img3.style.borderRadius ='100px';
+
+let img4 = document.createElement('img');
+img4.setAttribute('src','images.png');
+img4.style.width = '100%';
+img4.style.height = '100%';
+img4.style.borderRadius ='100px';
+
+let img5 = document.createElement('img');
+img5.setAttribute('src','images.png');
+img5.style.width = '100%';
+img5.style.height = '100%';
+img5.style.borderRadius ='100px';
+
 for(let i = 0; i < 5; i++){
   for(let j = 0; j < 5; j++) {
     mytextsArray[i].children[j].innerText = teamArray[i][1][j];
