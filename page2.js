@@ -316,21 +316,25 @@ const team = {
     four:["사진","최대건","https://github.com/DGChoi3904","","유성구",""],
     five:["사진","임지성","https://github.com/WJKK21","","동구",""]
 }
-console.dir(team);
+// 반복문 참조를 위한 team객체 배열로 만듦
 const teamArray = Object.entries(team);
+
+console.dir(team);
 console.dir(teamArray);
 console.dir(teamArray[0]); // one 과 one의 값들
 console.dir(teamArray[0][0]); // one
 console.dir(teamArray[0][1]); // team.one의 값들
-console.dir(teamArray[0][1][0]); // 사진
-console.dir(teamArray[0][1][1]); // 김동주
-console.dir(teamArray[0][1][2]); // 깃헙주소
+console.dir(teamArray[0][1][0]); // team.one의 사진
+console.dir(teamArray[0][1][1]); // team.one의 김동주
+console.dir(teamArray[0][1][2]); // team.one의 깃헙주소
 
 let img = document.createElement('img');
 img.setAttribute('src','사진테스트.png');
 img.style.width = '100%';
 img.style.height = '100%';
 img.style.borderRadius ='100px';
+
+// 반복문을 통한 mytext에 team 값들로 채우기
 for(let i = 0; i < 5; i++){
   for(let j = 0; j < 5; j++) {
     mytextsArray[i].children[j].innerText = teamArray[i][1][j];
