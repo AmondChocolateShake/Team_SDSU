@@ -201,9 +201,9 @@ setStyle(mytexts5, textStyles);
 
 const team = {
     one:["사진","김동주","https://github.com/AmondChocolateShake","","세종",""],
-    two:["사진","이재권","https://github.com/nowkwon97","","서구",""],
-    three:["사진","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
-    four:["사진","최대건","https://github.com/DGChoi3904","","유성구",""],
+    two:["사진","이재권","https://github.com/nowkwon97","nowkwon97@gmail.com","서구","프론트와 백을 자유롭게 다루는 풀스텍 개발자가 되기위해 노력중인 개발자입니다. 앞으로의 모습을 기대해주시기 바랍니다!"],
+    three:["사진","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","안녕하세요 저는 디지털 노마드의 삶 , 다재다능한 풀스텍 프리랜서를 꿈꾸고 있는 개발자 정지은입니다. 꿈을 이루기 위해 앞으로 나아가는 모습 보여드리겠습니다. 잘부탁드립니다!"],
+    four:["사진","최대건","https://github.com/DGChoi3904","dgchoi3904@gmail.com","유성구","안녕하세요, 저는 팀 내에서 인간GPT(임시)를 담당하고 있는, 백엔드와 프론트엔드를 자유롭게 다룰 수 있기를 지향하는 개발자입니다. 앞으로도 잘 부탁드립니다."],
     five:["사진","임지성","https://github.com/WJKK21","","동구",""]
 }
 console.dir(team);
