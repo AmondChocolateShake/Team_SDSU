@@ -113,9 +113,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
   //------------------------
   
-
-  const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
-  const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
+  
   
 
   box0.appendChild(myimg1);
@@ -158,6 +156,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
 // 자기소개 transition 적용 반복 구문
   const boxArray = [box0, box1, box2, box3, box4];
+  const zIndexSize = [5, 4, 3, 2, 1];
   for(let i = 0; i < 5; i++) {
     boxArray[i].style.setProperty("transition", "height 1s");
     boxArray[i].addEventListener("mouseover",function(){
@@ -168,9 +167,9 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 
   boxArray[i].addEventListener("mouseout",function(){
     boxArray[i].style.setProperty("height","100%");
-    // boxArray[i].style.zIndex =[i];
+    boxArray[i].style.zIndex =zIndexSize[i];
     myimgArray[i].style.display="none";
-    myimgArray[i].style.display="none";
+    mytextsArray[i].style.display="none";
   });
   }
   
@@ -205,28 +204,57 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   const myimg5 = document.createElement('div');
   const mytexts5 = document.createElement('div');
 
+  const text1 = document.createElement('div');
+  const text2 = document.createElement('div');
+  const text3 = document.createElement('div');
+  const text4 = document.createElement('div');
+  const text5 = document.createElement('div');
+  const textArray = [text1, text2, text3, text4, text5];
 
+  // myimg 배열 생성
+  const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
+  // mytext 배열 생성
+  const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
-for (let i = 0; i < 5; i++) {
-const text = document.createElement('div');
-    text.innerText = 'text';
-    text.style.width = '90%';
-    text.style.backgroundColor = 'gray';
-    text.style.display = 'flex';
-    text.style.flexDirection = 'center';
+
+for(let i = 0; i < 5; i++) {
+  for(let j = 0; j < 5; j++) {
+    textArray[j].innerText = 'text';
+    textArray[j].style.width = '90%';
+    textArray[j].style.backgroundColor = 'gray';
+    textArray[j].style.display = 'flex';
+    textArray[j].style.flexDirection = 'center';
     
-    if (i === 4) {
-    text.style.height = '25%';
-    text.style.margin = '2%';
+    if (j === 4) {
+      textArray[j].style.height = '25%';
+      textArray[j].style.margin = '2%';
 
     } else {
-    text.style.height = '15%';
-    text.style.margin = '2%';
+      textArray[j].style.height = '15%';
+      textArray[j].style.margin = '2%';
     }
-    mytexts3.appendChild(text);
-    
+  };
+  mytextsArray[i].appendChild(textArray[i]);
+};
 
-}
+// for (let i = 0; i < 5; i++) {
+// const text = document.createElement('div');
+//     text.innerText = 'text';
+//     text.style.width = '90%';
+//     text.style.backgroundColor = 'gray';
+//     text.style.display = 'flex';
+//     text.style.flexDirection = 'center';
+    
+//     if (i === 4) {
+//     text.style.height = '25%';
+//     text.style.margin = '2%';
+
+//     } else {
+//     text.style.height = '15%';
+//     text.style.margin = '2%';
+//     }
+//     mytextsArray[2].appendChild(text);
+// }
 //----setStyle  
 function setStyle(element, styles) {
     for (const property in styles) {
