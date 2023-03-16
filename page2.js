@@ -1,6 +1,38 @@
 const root = document.getElementById('root');
 const page2 = document.getElementById('page2');
 
+// team 정보를 담는 객체 생성
+const team = {
+  one:["김동주","https://github.com/AmondChocolateShake","","세종",""],
+  two:["이재권","https://github.com/nowkwon97","nowkwon97@gmail.com","서구","프론트와 백을 자유롭게 다루는 풀스텍 개발자가 되기위해 노력중인 개발자입니다. 앞으로의 모습을 기대해주시기 바랍니다!"],
+  three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","안녕하세요 저는 디지털 노마드의 삶 , 다재다능한 풀스텍 프리랜서를 꿈꾸고 있는 개발자 정지은입니다. 꿈을 이루기 위해 앞으로 나아가는 모습 보여드리겠습니다. 잘부탁드립니다!"],
+  four:["최대건","https://github.com/DGChoi3904","dgchoi3904@gmail.com","유성구","안녕하세요, 저는 팀 내에서 인간GPT(임시)를 담당하고 있는, 백엔드와 프론트엔드를 자유롭게 다룰 수 있기를 지향하는 개발자입니다. 앞으로도 잘 부탁드립니다."],
+  five:["임지성","https://github.com/WJKK21","verstand821@gmail.com","동구","이전에는 다른 분야에서 일하다가 프로그래밍에 빠져 이제는 개발자로서 살아가고 있습니다. 아직은 부족한 점이 많아 공부하고 있습니다."]
+}
+
+// 프로필 상세보기 시 윗부분(myimg)와 아랫부분(mytexts) 로 구분
+const myimg1 = document.createElement('div');
+const mytexts1 = document.createElement('div');
+const myimg2 = document.createElement('div');
+const mytexts2 = document.createElement('div');
+const myimg3 = document.createElement('div');
+const mytexts3 = document.createElement('div');
+const myimg4 = document.createElement('div');
+const mytexts4 = document.createElement('div');
+const myimg5 = document.createElement('div');
+const mytexts5 = document.createElement('div');
+// 
+// const text1 = document.createElement('div');
+// const text2 = document.createElement('div');
+// const text3 = document.createElement('div');
+// const text4 = document.createElement('div');
+// const text5 = document.createElement('div');
+
+// myimg 배열 생성
+const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
+// mytext 배열 생성
+const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
+
 // page2 style 객체
 let page2DomStyle = {
   firstArray : ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"],
@@ -20,7 +52,7 @@ page2DomStyling(page2DomStyle);
 // 조건을 걸어서 짝수 번째의 introduceBox는 원과 박스의 위치가 바뀌게 해야한다..
 
 let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
-
+// container 박스 안에 circle(프로필사진), box(간단한 자기소개란)을 만드는 함수
 function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   // makeIntroduceBoxArray의 요소 갯수 만큼 반복 진행
   for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
@@ -60,9 +92,14 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     
   };
   console.log(page2.children[0].children[1]);
-  console.log(box0);
+  console.dir(box0.innerText);
+  box0.innerText = "asd";
 
   //------------------------
+  // for(let i = 0; i < boxArray.length; i++) {
+  //   boxArray[i].appendChild(myimgArray[0]);
+  //   boxArray[i].appendChild(mytextsArray[0]);
+  // };
   box0.appendChild(myimg1);
   box0.appendChild(mytexts1);
   box1.appendChild(myimg2);
@@ -73,6 +110,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   box3.appendChild(mytexts4);
   box4.appendChild(myimg5);
   box4.appendChild(mytexts5);
+
   // 이미지 파일을 각 프로필 상세보기에 붙여줌
   myimg1.appendChild(img1);
   myimg2.appendChild(img2);
@@ -117,33 +155,13 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
 };
 
 // }
-const myimg1 = document.createElement('div');
-const mytexts1 = document.createElement('div');
-const myimg2 = document.createElement('div');
-const mytexts2 = document.createElement('div');
-const myimg3 = document.createElement('div');
-const mytexts3 = document.createElement('div');
-const myimg4 = document.createElement('div');
-const mytexts4 = document.createElement('div');
-const myimg5 = document.createElement('div');
-const mytexts5 = document.createElement('div');
 
-const text1 = document.createElement('div');
-const text2 = document.createElement('div');
-const text3 = document.createElement('div');
-const text4 = document.createElement('div');
-const text5 = document.createElement('div');
 
-const textArray = [text1, text2, text3, text4, text5];
-
-// myimg 배열 생성
-const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
-// mytext 배열 생성
-const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
 // let textArray = [text1,text2,text3,text4,text5];
 
 //for(i=0; i<5; i++){
+// 프로필 상세보기 시 나오는 div박스 5개 생성
 function textMaker(name,parent){
 for (let i = 0; i < 5; i++) {
     let name  = document.createElement('div');
@@ -197,13 +215,7 @@ setStyle(myimg5, styles);
 setStyle(mytexts5, textStyles);
 
 
-const team = {
-    one:["김동주","https://github.com/AmondChocolateShake","","세종",""],
-    two:["이재권","https://github.com/nowkwon97","","서구",""],
-    three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
-    four:["최대건","https://github.com/DGChoi3904","","유성구",""],
-    five:["임지성","https://github.com/WJKK21","","동구",""]
-}
+
 console.dir(team);
 const teamArray = Object.entries(team);
 console.dir(teamArray);
@@ -245,6 +257,7 @@ img5.style.width = '100%';
 img5.style.height = '100%';
 img5.style.borderRadius ='100px';
 
+// team 객체의 내용을 상세보기 div 5개에 넣어주는 반복문
 for(let i = 0; i < 5; i++){
   for(let j = 0; j < 5; j++) {
     mytextsArray[i].children[j].innerText = teamArray[i][1][j];
