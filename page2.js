@@ -1,16 +1,5 @@
 const root = document.getElementById('root');
 const page2 = document.getElementById('page2');
-
-// team 정보를 담는 객체 생성
-const team = {
-  one:["김동주","https://github.com/AmondChocolateShake","","세종",""],
-  two:["이재권","https://github.com/nowkwon97","nowkwon97@gmail.com","서구","프론트와 백을 자유롭게 다루는 풀스텍 개발자가 되기위해 노력중인 개발자입니다. 앞으로의 모습을 기대해주시기 바랍니다!"],
-  three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","안녕하세요 저는 디지털 노마드의 삶 , 다재다능한 풀스텍 프리랜서를 꿈꾸고 있는 개발자 정지은입니다. 꿈을 이루기 위해 앞으로 나아가는 모습 보여드리겠습니다. 잘부탁드립니다!"],
-  four:["최대건","https://github.com/DGChoi3904","dgchoi3904@gmail.com","유성구","안녕하세요, 저는 팀 내에서 인간GPT(임시)를 담당하고 있는, 백엔드와 프론트엔드를 자유롭게 다룰 수 있기를 지향하는 개발자입니다. 앞으로도 잘 부탁드립니다."],
-  five:["임지성","https://github.com/WJKK21","verstand821@gmail.com","동구","이전에는 다른 분야에서 일하다가 프로그래밍에 빠져 이제는 개발자로서 살아가고 있습니다. 아직은 부족한 점이 많아 공부하고 있습니다."]
-}
-
-// 프로필 상세보기 시 윗부분(myimg)와 아랫부분(mytexts) 로 구분
 const myimg1 = document.createElement('div');
 const mytexts1 = document.createElement('div');
 const myimg2 = document.createElement('div');
@@ -21,38 +10,47 @@ const myimg4 = document.createElement('div');
 const mytexts4 = document.createElement('div');
 const myimg5 = document.createElement('div');
 const mytexts5 = document.createElement('div');
-// 
-// const text1 = document.createElement('div');
-// const text2 = document.createElement('div');
-// const text3 = document.createElement('div');
-// const text4 = document.createElement('div');
-// const text5 = document.createElement('div');
 
+const text1 = document.createElement('div');
+const text2 = document.createElement('div');
+const text3 = document.createElement('div');
+const text4 = document.createElement('div');
+const text5 = document.createElement('div');
+
+let img1 = document.createElement('img');
+let img2 = document.createElement('img');
+let img3 = document.createElement('img');
+let img4 = document.createElement('img');
+let img5 = document.createElement('img');
+img1.setAttribute('src','images.png');
+img2.setAttribute('src','images.png');
+img3.setAttribute('src','images.png');
+img4.setAttribute('src','images.png');
+img5.setAttribute('src','images.png');
+
+
+const textArray = [text1, text2, text3, text4, text5];
 // myimg 배열 생성
 const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
 // mytext 배열 생성
 const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
+// mytexts >div 5
+let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
 
-// page2 style 객체
-let page2DomStyle = {
-  firstArray : ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"],
-  secondArray : ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"],
-  element : page2
-};
-// page2 style 적용 함수
-function page2DomStyling (object) {
-  for (let i = 0; i < object.firstArray.length; i++) {
-    object.element.style[object.firstArray[i]] = object.secondArray[i];
-  };
-};
-page2DomStyling(page2DomStyle);
+const team = {
+  one:["김동주","https://github.com/AmondChocolateShake","","세종",""],
+  two:["이재권","https://github.com/nowkwon97","nowkwon97@gmail.com","서구","프론트와 백을 자유롭게 다루는 풀스텍 개발자가 되기위해 노력중인 개발자입니다. 앞으로의 모습을 기대해주시기 바랍니다!"],
+  three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","안녕하세요 저는 디지털 노마드의 삶 , 다재다능한 풀스텍 프리랜서를 꿈꾸고 있는 개발자 정지은입니다. 꿈을 이루기 위해 앞으로 나아가는 모습 보여드리겠습니다. 잘부탁드립니다"],
+  four:["최대건","https://github.com/DGChoi3904","dgchoi3904@gmail.com","유성구","안녕하세요, 저는 팀 내에서 인간GPT(임시)를 담당하고 있는, 백엔드와 프론트엔드를 자유롭게 다룰 수 있기를 지향하는 개발자입니다. 앞으로도 잘 부탁드립니다."],
+  five:["임지성","https://github.com/WJKK21","","동구",""]
+}
+
+
 
 
 // 함수 두개를 쓰지말고 한 함수의 조건을 바꿔보자.
 // 조건을 걸어서 짝수 번째의 introduceBox는 원과 박스의 위치가 바뀌게 해야한다..
 
-let makeIntroduceBoxArray = ["box1", "box2", "box3", "box4", "box5"];
-// container 박스 안에 circle(프로필사진), box(간단한 자기소개란)을 만드는 함수
 function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   // makeIntroduceBoxArray의 요소 갯수 만큼 반복 진행
   for (let i = 0; i < makeIntroduceBoxArray.length; i++) {
@@ -91,9 +89,6 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
     makeBox.style.borderRadius = "20px";
     
   };
-  console.log(page2.children[0].children[1]);
-  console.dir(box0.innerText);
-  box0.innerText = "asd";
 
   //------------------------
   // for(let i = 0; i < boxArray.length; i++) {
@@ -154,14 +149,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   }
 };
 
-// }
 
-
-// mytexts >div 5
-// let textArray = [text1,text2,text3,text4,text5];
-
-//for(i=0; i<5; i++){
-// 프로필 상세보기 시 나오는 div박스 5개 생성
 function textMaker(name,parent){
 for (let i = 0; i < 5; i++) {
     let name  = document.createElement('div');
@@ -177,6 +165,20 @@ textMaker('text2',mytexts2);
 textMaker('text3',mytexts3);
 textMaker('text4',mytexts4);
 textMaker('text5',mytexts5);
+//-----------------------------스타일 함수----------------------------
+// page2 style 객체
+let page2DomStyle = {
+  firstArray : ["width", "height", "backgroundColor", "display", "flexDirection", "justifyContent", "alignContent"],
+  secondArray : ["100vw", "100vh", "#AADF7F", "flex", "column", "space-around", "center-around"],
+  element : page2
+};
+// page2 style 적용 함수
+function page2DomStyling (object) {
+  for (let i = 0; i < object.firstArray.length; i++) {
+    object.element.style[object.firstArray[i]] = object.secondArray[i];
+  };
+};
+page2DomStyling(page2DomStyle);
 
 //----setStyle  
 function setStyle(element, styles) {
@@ -203,6 +205,12 @@ color: 'white',
 borderRadius: '10px',
 };
 
+const imgStyles = {
+width : '100%',
+height : '100%',
+borderRadius : '100px',
+};
+//스타일 호출
 setStyle(myimg1, styles);
 setStyle(mytexts1, textStyles);
 setStyle(myimg2, styles);
@@ -214,8 +222,14 @@ setStyle(mytexts4, textStyles);
 setStyle(myimg5, styles);
 setStyle(mytexts5, textStyles);
 
+setStyle(img1, imgStyles);
+setStyle(img2, imgStyles);
+setStyle(img3, imgStyles);
+setStyle(img4, imgStyles);
+setStyle(img5, imgStyles);
 
 
+//-----------------------------------------------------------------
 console.dir(team);
 const teamArray = Object.entries(team);
 console.dir(teamArray);
@@ -226,36 +240,6 @@ console.dir(teamArray[0][1][0]); // 사진
 console.dir(teamArray[0][1][1]); // 김동주
 console.dir(teamArray[0][1][2]); // 깃헙주소
 
-// 각 프로필 상세보기 시 나오는 이미지
-let img1 = document.createElement('img');
-img1.setAttribute('src','images.png');
-img1.style.width = '100%';
-img1.style.height = '100%';
-img1.style.borderRadius ='100px';
-
-let img2 = document.createElement('img');
-img2.setAttribute('src','images.png');
-img2.style.width = '100%';
-img2.style.height = '100%';
-img2.style.borderRadius ='100px';
-
-let img3 = document.createElement('img');
-img3.setAttribute('src','images.png');
-img3.style.width = '100%';
-img3.style.height = '100%';
-img3.style.borderRadius ='100px';
-
-let img4 = document.createElement('img');
-img4.setAttribute('src','images.png');
-img4.style.width = '100%';
-img4.style.height = '100%';
-img4.style.borderRadius ='100px';
-
-let img5 = document.createElement('img');
-img5.setAttribute('src','images.png');
-img5.style.width = '100%';
-img5.style.height = '100%';
-img5.style.borderRadius ='100px';
 
 // team 객체의 내용을 상세보기 div 5개에 넣어주는 반복문
 for(let i = 0; i < 5; i++){
