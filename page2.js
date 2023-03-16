@@ -80,6 +80,7 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   myimg4.appendChild(img4);
   myimg5.appendChild(img5);
   
+  // 마우스 오버 되기 전 display: none 해주시
   for(let i = 0; i < myimgArray.length; i++) {
     myimgArray[i].style.display = "none";
     mytextsArray[i].style.display = "none";
@@ -161,105 +162,39 @@ textMaker('text5',mytexts5);
 
 //----setStyle  
 function setStyle(element, styles) {
-    for (const property in styles) {
-        element.style[property] = styles[property];
-    }
+  for (const property in styles) {
+      element.style[property] = styles[property];
+  }
 }
-setStyle(myimg1, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts1, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
+const styles = {
+display: 'flex',
+width: '100%',
+height: '30%',
+backgroundColor: 'white',
+borderRadius: '100px',
+};
 
-});
+const textStyles = {
+display: 'flex',
+width: '100%',
+height: '70%',
+backgroundColor: 'white',
+alignItems: 'center',
+flexDirection: 'column',
+color: 'white',
+borderRadius: '10px',
+};
 
-setStyle(myimg2, {
-    display: 'flex',
-    width: '100%',
-    height: '30%',
-    backgroundColor: 'white',
-    borderRadius: '100px',
-});
-setStyle(mytexts2, {
-    display: 'flex',
-    width: '100%',
-    height: '70%',
-    backgroundColor: 'white',
-    alignItems: 'center',
-    flexDirection: 'column',
-    color: 'white',
-    borderRadius: '10px',
-
-});
-setStyle(myimg3, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts3, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
-
-});
-setStyle(myimg4, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts4, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
-
-});
-setStyle(myimg5, {
-  display: 'flex',
-  width: '100%',
-  height: '30%',
-  backgroundColor: 'white',
-  borderRadius: '100px',
-});
-//text
-setStyle(mytexts5, {
-  display: 'flex',
-  width: '100%',
-  height: '70%',
-  backgroundColor: 'white',
-  alignItems: 'center',
-  flexDirection: 'column',
-  color: 'white',
-  borderRadius: '10px',
-
-});
+setStyle(myimg1, styles);
+setStyle(mytexts1, textStyles);
+setStyle(myimg2, styles);
+setStyle(mytexts2, textStyles);
+setStyle(myimg3, styles);
+setStyle(mytexts3, textStyles);
+setStyle(myimg4, styles);
+setStyle(mytexts4, textStyles);
+setStyle(myimg5, styles);
+setStyle(mytexts5, textStyles);
 
 
 const team = {
