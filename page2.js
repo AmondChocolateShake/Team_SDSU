@@ -133,6 +133,12 @@ const text3 = document.createElement('div');
 const text4 = document.createElement('div');
 const text5 = document.createElement('div');
 
+let img1 = document.createElement('img');
+let img2 = document.createElement('img');
+let img3 = document.createElement('img');
+let img4 = document.createElement('img');
+let img5 = document.createElement('img');
+
 const textArray = [text1, text2, text3, text4, text5];
 
 // myimg 배열 생성
@@ -142,7 +148,6 @@ const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
 
 
-//for(i=0; i<5; i++){
 function textMaker(name,parent){
 for (let i = 0; i < 5; i++) {
     let name  = document.createElement('div');
@@ -184,6 +189,12 @@ color: 'white',
 borderRadius: '10px',
 };
 
+const imgStyles = {
+width : '100%',
+height : '100%',
+borderRadius : '100px',
+};
+
 setStyle(myimg1, styles);
 setStyle(mytexts1, textStyles);
 setStyle(myimg2, styles);
@@ -194,6 +205,13 @@ setStyle(myimg4, styles);
 setStyle(mytexts4, textStyles);
 setStyle(myimg5, styles);
 setStyle(mytexts5, textStyles);
+
+setStyle(img1, imgStyles);
+setStyle(img2, imgStyles);
+setStyle(img3, imgStyles);
+setStyle(img4, imgStyles);
+setStyle(img5, imgStyles);
+
 
 
 const team = {
@@ -214,35 +232,13 @@ console.dir(teamArray[0][1][1]); // 김동주
 console.dir(teamArray[0][1][2]); // 깃헙주소
 
 // 각 프로필 상세보기 시 나오는 이미지
-let img1 = document.createElement('img');
+
 img1.setAttribute('src','images.png');
-img1.style.width = '100%';
-img1.style.height = '100%';
-img1.style.borderRadius ='100px';
-
-let img2 = document.createElement('img');
 img2.setAttribute('src','images.png');
-img2.style.width = '100%';
-img2.style.height = '100%';
-img2.style.borderRadius ='100px';
-
-let img3 = document.createElement('img');
 img3.setAttribute('src','images.png');
-img3.style.width = '100%';
-img3.style.height = '100%';
-img3.style.borderRadius ='100px';
-
-let img4 = document.createElement('img');
 img4.setAttribute('src','images.png');
-img4.style.width = '100%';
-img4.style.height = '100%';
-img4.style.borderRadius ='100px';
-
-let img5 = document.createElement('img');
 img5.setAttribute('src','images.png');
-img5.style.width = '100%';
-img5.style.height = '100%';
-img5.style.borderRadius ='100px';
+
 
 for(let i = 0; i < 5; i++){
   for(let j = 0; j < 5; j++) {
