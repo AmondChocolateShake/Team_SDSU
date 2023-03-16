@@ -1,4 +1,3 @@
-
 // 페이지 id 받아옴
 const pageone = document.getElementById("page1");
 
@@ -46,20 +45,28 @@ root.style.background = '#88D4F4';
 
 //태그 구조 작성
 let tDiscription = document.createElement("section");
-let tNameExplain = document.createElement("h3");
-tDiscription.appendChild(tNameExplain);
-let tWhoWeAre = document.createElement("p");
-tDiscription.appendChild(tWhoWeAre);
-let tColor = document.createElement("p");
-tDiscription.appendChild(tColor);
-let tMotto = document.createElement("p");
-tDiscription.appendChild(tMotto);
-let tPurpose = document.createElement("p");
-tDiscription.appendChild(tPurpose);
-let tMatJjip = document.createElement("p");
-tDiscription.appendChild(tMatJjip);
+let tDiscriptionContainer = document.createElement("div");
+let tNameExplain = document.createElement("div");
+tDiscription.appendChild(tDiscriptionContainer);
+tDiscriptionContainer.appendChild(tNameExplain);
+//이름 설명
+tNameExplainTopic = document.createElement("div")
+tNameExplainAnswer = document.createElement("div")
+tNameExplain.appendChild(tNameExplainTopic)
+tNameExplain.appendChild(tNameExplainAnswer)
+let tWhoWeAre = document.createElement("div");
+tDiscriptionContainer.appendChild(tWhoWeAre);
+let tColor = document.createElement("div");
+tDiscriptionContainer.appendChild(tColor);
+let tMotto = document.createElement("div");
+tDiscriptionContainer.appendChild(tMotto);
+let tPurpose = document.createElement("div");
+tDiscriptionContainer.appendChild(tPurpose);
+let tMatJjip = document.createElement("div");
+tDiscriptionContainer.appendChild(tMatJjip);
 //태그 컨텐츠(내용물) 설정
-tNameExplain.textContent = "팀 명 뜻";
+tNameExplainTopic.textContent = "팀 세동서유(世霘敍流)란?";
+tNameExplainAnswer.textContent = "팀 세동서유는 이러이러해서 저러저러합니다."
 tWhoWeAre.textContent = "우리 팀은 누구인가";
 tColor.textContent = "우리의 색깔";
 tMotto.textContent = "좌우명";
@@ -104,30 +111,48 @@ document.getElementById("page1").appendChild(tDiscription);
 
 //객체로 저장
 let tDiscriptionStyle = {
+  maxWidth : "100vw",
+  maxHeight : "80vh",
+  backgroundColor : "88D4F4",
+  display : "flex",
+  justifyContent : "center",
+  alignItems : "center",
+}
+let tDiscriptionContainerStyle = {
   //크기 설정
+  minWidth : "96vw", 
   maxWidth : "96vw",
   maxHeight : "76vh",
   boxSizing : "border-box",
   //디스플레이 설정
   display : "flex",
   flexDirection : "column",
+  justifyContent : "center",
+  alignItems : "baseline",
   //여백 설정
-  margin : "2vh 2vw",
-  padding : "2vh 2vw",
+  margin : "24px 24px",
+  padding : "24px 24px",
   //색상 설정
   backgroundColor : "#D9D9D9",
+  //폰트 설정
+  textAlign : "start",
+  fontSize : "1.5em",
+  lineHeight : "2em",
 }
 let tNameExplainStyle = {
-  maxWidth : "100%",
+  width : "100%",
   height : "20%",
   boxSizing : "border-box",
   //여백 설정
-  margin : "2vh 0",
-  padding : "2vh 0",
+  padding : "24px 24px",
   //색상 설정
   backgroundColor : "#D06D6D",
+  //디스플레이 설정
+  display : "flex",
+  flexDirection : "column",
+  lineHeight : "2em",
 
 } 
 setStyle(tDiscriptionStyle, tDiscription);
+setStyle(tDiscriptionContainerStyle, tDiscriptionContainer);
 setStyle(tNameExplainStyle,tNameExplain);
-
