@@ -198,11 +198,11 @@ setStyle(mytexts5, textStyles);
 
 
 const team = {
-    one:["images.png","김동주","https://github.com/AmondChocolateShake","","세종",""],
-    two:["images.png","이재권","https://github.com/nowkwon97","","서구",""],
-    three:["images.png","정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
-    four:["images.png","최대건","https://github.com/DGChoi3904","","유성구",""],
-    five:["images.png","임지성","https://github.com/WJKK21","","동구",""]
+    one:["김동주","https://github.com/AmondChocolateShake","","세종",""],
+    two:["이재권","https://github.com/nowkwon97","","서구",""],
+    three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
+    four:["최대건","https://github.com/DGChoi3904","","유성구",""],
+    five:["임지성","https://github.com/WJKK21","","동구",""]
 }
 console.dir(team);
 const teamArray = Object.entries(team);
