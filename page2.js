@@ -116,7 +116,6 @@ function introdueBoxMaker(containerElement, childElementOne, childElementTwo) {
   }
 };
 
-// }
 const myimg1 = document.createElement('div');
 const mytexts1 = document.createElement('div');
 const myimg2 = document.createElement('div');
@@ -141,7 +140,7 @@ const myimgArray = [myimg1, myimg2, myimg3, myimg4, myimg5];
 // mytext 배열 생성
 const mytextsArray = [mytexts1, mytexts2, mytexts3, mytexts4, mytexts5];
 // mytexts >div 5
-// let textArray = [text1,text2,text3,text4,text5];
+
 
 //for(i=0; i<5; i++){
 function textMaker(name,parent){
@@ -199,9 +198,9 @@ setStyle(mytexts5, textStyles);
 
 const team = {
     one:["김동주","https://github.com/AmondChocolateShake","","세종",""],
-    two:["이재권","https://github.com/nowkwon97","","서구",""],
-    three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","자기소개"],
-    four:["최대건","https://github.com/DGChoi3904","","유성구",""],
+    two:["이재권","https://github.com/nowkwon97","nowkwon97@gmail.com","서구","프론트와 백을 자유롭게 다루는 풀스텍 개발자가 되기위해 노력중인 개발자입니다. 앞으로의 모습을 기대해주시기 바랍니다!"],
+    three:["정지은","https://github.com/jiny43","je_eun2735@naver.com","서구","안녕하세요 저는 디지털 노마드의 삶 , 다재다능한 풀스텍 프리랜서를 꿈꾸고 있는 개발자 정지은입니다. 꿈을 이루기 위해 앞으로 나아가는 모습 보여드리겠습니다. 잘부탁드립니다"],
+    four:["최대건","https://github.com/DGChoi3904","dgchoi3904@gmail.com","유성구","안녕하세요, 저는 팀 내에서 인간GPT(임시)를 담당하고 있는, 백엔드와 프론트엔드를 자유롭게 다룰 수 있기를 지향하는 개발자입니다. 앞으로도 잘 부탁드립니다."],
     five:["임지성","https://github.com/WJKK21","","동구",""]
 }
 console.dir(team);
