@@ -247,3 +247,4 @@ for(let i = 0; i < 5; i++){
     mytextsArray[i].children[j].innerText = teamArray[i][1][j];
   };
 };
+introdueBoxMaker('div', 'div', 'div');
